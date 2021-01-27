@@ -7,6 +7,7 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.WindowManager;
 import android.widget.VideoView;
 
 public class SplashActivity extends AppCompatActivity {
@@ -15,11 +16,18 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+//                WindowManager.LayoutParams.FLAG_FULLSCREEN); //상태 바 없애는 코드!
         setContentView(R.layout.activity_splash);
+        //createGUI();
+
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setIcon(R.drawable.logoimage);
 
         v = findViewById(R.id.splash);
         Uri videoUri;
-        videoUri = Uri.parse("android.resource://"+getPackageName()+ "/" + R.raw.splash);
+        videoUri = Uri.parse("android.resource://"+getPackageName()+ "/" + R.raw.mainsplash);
         v.setVideoURI(videoUri);
 
         v.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
