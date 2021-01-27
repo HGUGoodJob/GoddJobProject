@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Singing">
+        <activity
+            android:name=".ChoiceSong"
+            android:label="@string/title_activity_choice_song"
+            android:theme="@style/Theme.Singing.NoActionBar"></activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".PartPractice" />
         <activity android:name=".ChoiceLevel" />
