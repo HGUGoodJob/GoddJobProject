@@ -16,13 +16,9 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+//                WindowManager.LayoutParams.FLAG_FULLSCREEN); //상태바 없애는 코
         setContentView(R.layout.activity_splash);
-
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setIcon(R.drawable.logoimage);
 
         v = findViewById(R.id.splash);
         Uri videoUri;
