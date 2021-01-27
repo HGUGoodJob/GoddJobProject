@@ -7,13 +7,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/image1"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:src="@drawable/logoimage" />
-
     <ImageButton
         android:id="@+id/levelhigh"
         android:layout_width="match_parent"

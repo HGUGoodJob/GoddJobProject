@@ -4,21 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".SplashActivity">
-
-    <ImageView
-        android:id="@+id/image1"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:src="@drawable/logoimage" />
 
     <VideoView
         android:id="@+id/splash"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="3" />
+        android:layout_weight="1" />
 
 
 </LinearLayout>
