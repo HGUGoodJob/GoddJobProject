@@ -41,7 +41,6 @@ public class PartPractice extends AppCompatActivity {
     Button pitchButton, pitchbutton2, pitchbutton3, pitchbutton4, pitchbutton5, pitchbutton6, pitchbutton7; //recordButton -> pitchButton
     TextView highPitch;
     TextView lowPitch;
-    TextView low;
     ImageView pitchline;
     String filename = "recorded_sound.wav";
     float note;
@@ -79,44 +78,57 @@ public class PartPractice extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                    pitchButton.setTextColor(Color.parseColor("#FF000000"));
-                    recordAudio2(330.000f);
+                buttonColored();
+                pitchButton.setSelected(true);
+                recordAudio2(330.000f);
             }
         });
 
         pitchbutton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                buttonColored();
+                pitchbutton2.setSelected(true);
                 recordAudio2(294.000f);
             }
         });
         pitchbutton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                buttonColored();
+                pitchbutton3.setSelected(true);
                 recordAudio2(262.000f);
             }
         });
         pitchbutton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                buttonColored();
+                pitchbutton4.setSelected(true);
                 recordAudio2(294.000f);
             }
         });
         pitchbutton5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                buttonColored();
+                pitchbutton5.setSelected(true);
                 recordAudio2(330.000f);
             }
         });
         pitchbutton6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                buttonColored();
+                pitchbutton6.setSelected(true);
                 recordAudio2(330.000f);
             }
         });
         pitchbutton7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                buttonColored();
+                pitchbutton7.setSelected(true);
                 recordAudio2(330.000f);
             }
         });
@@ -124,53 +136,6 @@ public class PartPractice extends AppCompatActivity {
     }
 
 
-    /*public void recordAudio()
-    {
-        releaseDispatcher();
-        dispatcher = AudioDispatcherFactory.fromDefaultMicrophone(22050,1024,0);
-
-        try {
-            RandomAccessFile randomAccessFile = new RandomAccessFile(file,"rw");
-            AudioProcessor recordProcessor = new WriterProcessor(tarsosDSPAudioFormat, randomAccessFile);
-            dispatcher.addAudioProcessor(recordProcessor);
-
-            PitchDetectionHandler pitchDetectionHandler = new PitchDetectionHandler() {
-                @Override
-                public void handlePitch(PitchDetectionResult res, AudioEvent e){
-                    final float pitchInHz = res.getPitch();
-                    final float mi = 330.000f;
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            pitchTextView.setText(pitchInHz + "");
-                            if(Float.compare(pitchInHz, mi - 20.000f) < 0){
-                                pitchline.setColorFilter(null);
-                                lowPitch.setTextColor(Color.parseColor("#e65d5d"));
-                                highPitch.setTextColor(Color.parseColor("#0a0a0a"));
-                            }else if(Float.compare(pitchInHz, mi + 20.000f) > 0){
-                                pitchline.setColorFilter(null);
-                                lowPitch.setTextColor(Color.parseColor("#0a0a0a"));
-                                highPitch.setTextColor(Color.parseColor("#e65d5d"));
-                            }else{
-                                pitchline.setColorFilter(Color.parseColor("#82fa46"), PorterDuff.Mode.SRC_IN);
-                                lowPitch.setTextColor(Color.parseColor("#0a0a0a"));
-                                highPitch.setTextColor(Color.parseColor("#0a0a0a"));
-                            }
-                        }
-                    });
-                }
-            };
-
-            AudioProcessor pitchProcessor = new PitchProcessor(PitchProcessor.PitchEstimationAlgorithm.FFT_YIN, 22050, 1024, pitchDetectionHandler);
-            dispatcher.addAudioProcessor(pitchProcessor);
-
-            Thread audioThread = new Thread(dispatcher, "Audio Thread");
-            audioThread.start();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }*/
 
     public void recordAudio2(float note)
     {
@@ -220,7 +185,15 @@ public class PartPractice extends AppCompatActivity {
     }
 
 
-
+    public void buttonColored(){
+        pitchButton.setSelected(false);
+        pitchbutton2.setSelected(false);
+        pitchbutton3.setSelected(false);
+        pitchbutton4.setSelected(false);
+        pitchbutton5.setSelected(false);
+        pitchbutton6.setSelected(false);
+        pitchbutton7.setSelected(false);
+    }
     public void releaseDispatcher()
     {
         if(dispatcher != null)
