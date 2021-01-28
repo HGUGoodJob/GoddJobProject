@@ -44,13 +44,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@android:color/transparent"
         android:drawableLeft="@drawable/ic_free_icon_diamond_636600"
         android:paddingLeft="40dp"
         android:scaleType="centerInside"
         android:text="@string/strBtn1"
         android:fontFamily = "@font/scdream2"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:background="?selectableItemBackground"
+        android:theme="@style/AppTheme.BlueRipple"/>
 
     <Button
         android:id="@+id/song_star"
@@ -62,7 +63,8 @@
         android:paddingLeft="40dp"
         android:layout_gravity="center"
         android:fontFamily = "@font/scdream2"
-        android:background="@android:color/transparent"
+        android:background="?selectableItemBackground"
+        android:theme="@style/AppTheme.BlueRipple"
         android:scaleType="centerInside" />
 
     <Button
@@ -72,12 +74,12 @@
         android:textSize="20dp"
         android:paddingLeft="40dp"
         android:drawableLeft="@drawable/ic_free_icon_diamond_636600"
-        android:layout_gravity="center"
-
-        android:scaleType="centerInside"
+        android:background="?selectableItemBackground"
+        android:theme="@style/AppTheme.BlueRipple"
         android:fontFamily = "@font/scdream2"
         android:text="@string/strBtn3"
-        android:background="@color/teal_700" />
+
+        />
 
 
 </LinearLayout>
