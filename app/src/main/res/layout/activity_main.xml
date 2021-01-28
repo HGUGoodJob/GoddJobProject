@@ -5,9 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/backmain">
 
-        <ImageButton
+        <!--<ImageButton
             android:id="@+id/button1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -23,6 +24,33 @@
             android:layout_weight="1"
             android:scaleType="center"
             android:src="@drawable/usingbutton"
-            android:background="@drawable/click_use"/>
+            android:background="@drawable/click_use"/>-->
+        <Button
+            android:id="@+id/button1"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_free_icon_diamond_636601"
+            android:fontFamily="@font/scdream2"
+            android:paddingLeft="100dp"
+            android:scaleType="centerInside"
+            android:text="시작하기"
+            android:textSize="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"     />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_free_icon_magnifying_glass_126474"
+            android:fontFamily="@font/scdream2"
+            android:paddingLeft="100dp"
+            android:scaleType="centerInside"
+            android:text="사용법"
+            android:textSize="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"     />
 
 </LinearLayout>

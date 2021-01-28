@@ -6,22 +6,25 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ChoiceSong"
-    android:background="@drawable/background"
+    android:background="@drawable/backsonglist"
     >
-
-    <ImageButton
+    <!--
+    android:background="@drawable/background"
+  <ImageButton
         android:id="@+id/song_plane"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#00FFFFFF"
+        android:layout_height="196dp"
+        android:layout_gravity="center"
+        android:background="@drawable/background"
         android:scaleType="centerInside"
         android:src="@drawable/song_plane" />
 
     <ImageButton
         android:id="@+id/song_star"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#00FFFFFF"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/background"
         android:scaleType="centerInside"
         android:src="@drawable/song_star" />
 
@@ -29,9 +32,52 @@
         android:id="@+id/songbutton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#00FFFFFF"
         android:src="@drawable/song_school"
+        android:layout_gravity="center"
+        android:background="@drawable/background"
         android:scaleType="centerInside"/>
+
+    -->
+
+    <Button
+        android:id="@+id/song_plane"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/ic_free_icon_diamond_636600"
+        android:paddingLeft="40dp"
+        android:scaleType="centerInside"
+        android:text="@string/strBtn1"
+        android:fontFamily = "@font/scdream2"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/song_star"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/strBtn2"
+        android:textSize="20dp"
+        android:drawableLeft="@drawable/ic_free_icon_diamond_636600"
+        android:paddingLeft="40dp"
+        android:layout_gravity="center"
+        android:fontFamily = "@font/scdream2"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside" />
+
+    <Button
+        android:id="@+id/songbutton3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:paddingLeft="40dp"
+        android:drawableLeft="@drawable/ic_free_icon_diamond_636600"
+        android:layout_gravity="center"
+
+        android:scaleType="centerInside"
+        android:fontFamily = "@font/scdream2"
+        android:text="@string/strBtn3"
+        android:background="@color/teal_700" />
 
 
 </LinearLayout>

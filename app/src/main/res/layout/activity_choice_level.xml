@@ -5,9 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/backlevel">
 
-    <ImageButton
+   <!-- <ImageButton
         android:id="@+id/levelhigh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,6 +30,48 @@
         android:layout_height="wrap_content"
         android:scaleType="center"
         android:layout_weight="1"
-        android:src="@drawable/level_low"/>
+        android:src="@drawable/level_low"/>-->
+
+    <Button
+        android:id="@+id/levelhigh"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/ic_free_icon_musical_note_126493"
+        android:fontFamily="@font/scdream2"
+        android:paddingLeft="140dp"
+        android:scaleType="centerInside"
+        android:text="@string/high"
+        android:textSize="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"     />
+
+    <Button
+        android:id="@+id/levelmiddle"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/ic_free_icon_musical_note_126493"
+        android:fontFamily="@font/scdream2"
+        android:paddingLeft="140dp"
+        android:scaleType="centerInside"
+        android:text="@string/middle"
+        android:textSize="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/levellow"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/ic_free_icon_musical_note_126493"
+        android:fontFamily="@font/scdream2"
+        android:paddingLeft="140dp"
+        android:scaleType="centerInside"
+        android:text="@string/low"
+        android:textSize="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"    />
 
 </LinearLayout>
