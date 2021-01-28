@@ -119,38 +119,45 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/pitchTextView"
-        android:layout_width="18dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="0"
-        android:textColor="#000000"
-        android:textSize="50sp" />
+    android:id="@+id/pitchTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:text="0"
+    android:textColor="#000000"
+    android:textSize="50sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <TextView
+            android:id="@+id/highpitch"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_margin="30dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
             android:fontFamily="casual"
             android:text="Too high!"
-            android:textColor="#000000"
-            android:textSize="35dp" />
+            android:textSize="30dp" />
+
+        <ImageView
+            android:id="@+id/pitchline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            app:srcCompat="@drawable/pitchline" />
 
         <TextView
-            android:layout_width="185dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_margin="30dp"
+            android:id="@+id/lowpitch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
             android:fontFamily="casual"
             android:text="Too low!"
-            android:textColor="#000000"
-            android:textSize="35dp" />
+            android:textSize="30dp"
+            android:layout_weight="1"/>
 
     </LinearLayout>
 

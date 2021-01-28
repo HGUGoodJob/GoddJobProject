@@ -1,10 +1,14 @@
 package com.goodjob.singing;
 
+import android.graphics.Color;
+import android.graphics.ColorSpace;
+import android.graphics.PorterDuff;
 import android.os.Environment;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.io.File;
@@ -33,6 +37,9 @@ public class PartPractice extends AppCompatActivity {
 
     TextView pitchTextView;
     Button pitchButton; //recordButton -> pitchButton
+    TextView highPitch;
+    TextView lowPitch;
+    ImageView pitchline;
     //Button playButton; //사용x
     boolean isRecording = false;  //녹음상태
     String filename = "recorded_sound.wav";
@@ -55,6 +62,9 @@ public class PartPractice extends AppCompatActivity {
 
         pitchTextView = findViewById(R.id.pitchTextView);
         pitchButton = findViewById(R.id.pitchButton);
+        highPitch = findViewById(R.id.highpitch);
+        lowPitch = findViewById(R.id.lowpitch);
+        pitchline = findViewById(R.id.pitchline);
         //playButton = findViewById(R.id.playButton);
 
         pitchButton.setOnClickListener(new View.OnClickListener() {
@@ -75,50 +85,8 @@ public class PartPractice extends AppCompatActivity {
                 }
             }
         });
-
-//        playButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                playAudio();
-//            }
-//        });
     }
 
-    public void playAudio()
-    {
-        try{
-            releaseDispatcher();
-
-            FileInputStream fileInputStream = new FileInputStream(file);
-            dispatcher = new AudioDispatcher(new UniversalAudioInputStream(fileInputStream, tarsosDSPAudioFormat), 1024, 0);
-
-            AudioProcessor playerProcessor = new AndroidAudioPlayer(tarsosDSPAudioFormat, 2048, 0);
-            dispatcher.addAudioProcessor(playerProcessor);
-
-            PitchDetectionHandler pitchDetectionHandler = new PitchDetectionHandler() {
-                @Override
-                public void handlePitch(PitchDetectionResult res, AudioEvent e){
-                    final float pitchInHz = res.getPitch();
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            pitchTextView.setText(pitchInHz + "");
-                        }
-                    });
-                }
-            };
-
-            AudioProcessor pitchProcessor = new PitchProcessor(PitchProcessor.PitchEstimationAlgorithm.FFT_YIN, 22050, 1024, pitchDetectionHandler);
-            dispatcher.addAudioProcessor(pitchProcessor);
-
-            Thread audioThread = new Thread(dispatcher, "Audio Thread");
-            audioThread.start();
-
-        }catch(Exception e)
-        {
-            e.printStackTrace();
-        }
-    }
 
     public void recordAudio()
     {
@@ -134,10 +102,24 @@ public class PartPractice extends AppCompatActivity {
                 @Override
                 public void handlePitch(PitchDetectionResult res, AudioEvent e){
                     final float pitchInHz = res.getPitch();
+                    final float mi = 330.000f;
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             pitchTextView.setText(pitchInHz + "");
+                            if(Float.compare(pitchInHz, mi - 20.000f) < 0){
+                                pitchline.setColorFilter(null);
+                                lowPitch.setTextColor(Color.parseColor("#e65d5d"));
+                                highPitch.setTextColor(Color.parseColor("#0a0a0a"));
+                            }else if(Float.compare(pitchInHz, mi + 20.000f) > 0){
+                                pitchline.setColorFilter(null);
+                                lowPitch.setTextColor(Color.parseColor("#0a0a0a"));
+                                highPitch.setTextColor(Color.parseColor("#e65d5d"));
+                            }else{
+                                pitchline.setColorFilter(Color.parseColor("#82fa46"), PorterDuff.Mode.SRC_IN);
+                                lowPitch.setTextColor(Color.parseColor("#0a0a0a"));
+                                highPitch.setTextColor(Color.parseColor("#0a0a0a"));
+                            }
                         }
                     });
                 }
