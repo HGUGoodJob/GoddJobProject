@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_pressed="true"
-
-        android:drawable="@drawable/back"/><!--눌렀을 경우 이미지-->
-
-    <item android:drawable="@drawable/backsonglist"/>
-
-</selector>
