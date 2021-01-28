@@ -27,7 +27,6 @@
             android:fontFamily="@font/scdream2"
             android:text="떴"
             android:textSize="20dp"
-            android:clickable="true"
             android:background="?selectableItemBackground"
             android:theme="@style/AppTheme.BlueRipple" />
 
@@ -72,7 +71,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/pitchButton5"
+            android:id="@+id/pitchbutton5"
             android:layout_width="0px"
             android:layout_height="match_parent"
             android:layout_weight="1"

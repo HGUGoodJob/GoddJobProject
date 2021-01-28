@@ -8,36 +8,6 @@
     tools:context=".ChoiceSong"
     android:background="@drawable/backsonglist"
     >
-    <!--
-    android:background="@drawable/background"
-  <ImageButton
-        android:id="@+id/song_plane"
-        android:layout_width="wrap_content"
-        android:layout_height="196dp"
-        android:layout_gravity="center"
-        android:background="@drawable/background"
-        android:scaleType="centerInside"
-        android:src="@drawable/song_plane" />
-
-    <ImageButton
-        android:id="@+id/song_star"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:background="@drawable/background"
-        android:scaleType="centerInside"
-        android:src="@drawable/song_star" />
-
-    <ImageButton
-        android:id="@+id/songbutton3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/song_school"
-        android:layout_gravity="center"
-        android:background="@drawable/background"
-        android:scaleType="centerInside"/>
-
-    -->
 
     <Button
         android:id="@+id/song_plane"

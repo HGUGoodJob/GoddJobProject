@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -36,13 +38,13 @@ public class PartPractice extends AppCompatActivity {
     File file;
 
     TextView pitchTextView;
-    Button pitchButton; //recordButton -> pitchButton
+    Button pitchButton, pitchbutton2, pitchbutton3, pitchbutton4, pitchbutton5, pitchbutton6, pitchbutton7; //recordButton -> pitchButton
     TextView highPitch;
     TextView lowPitch;
+    TextView low;
     ImageView pitchline;
-    //Button playButton; //사용x
-    boolean isRecording = false;  //녹음상태
     String filename = "recorded_sound.wav";
+    float note;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,33 +64,67 @@ public class PartPractice extends AppCompatActivity {
 
         pitchTextView = findViewById(R.id.pitchTextView);
         pitchButton = findViewById(R.id.pitchButton);
+        pitchbutton2 = findViewById(R.id.pitchbutton2);
+        pitchbutton3 = findViewById(R.id.pitchbutton3);
+        pitchbutton4 = findViewById(R.id.pitchbutton4);
+        pitchbutton5 = findViewById(R.id.pitchbutton5);
+        pitchbutton6 = findViewById(R.id.pitchbutton6);
+        pitchbutton7 = findViewById(R.id.pitchbutton7);
         highPitch = findViewById(R.id.highpitch);
         lowPitch = findViewById(R.id.lowpitch);
         pitchline = findViewById(R.id.pitchline);
-        //playButton = findViewById(R.id.playButton);
 
         pitchButton.setOnClickListener(new View.OnClickListener() {
             //녹음 버튼을 누르면 녹음 실행
+
             @Override
             public void onClick(View v) {
-                if(!isRecording)
-                {
-                    recordAudio();
-                    isRecording = true;
-                    //recordButton.setText("중지"); // 녹음 시작하면 버튼에 글자가 중지로 바뀜
-                }
-                else
-                {
-                    stopRecording();
-                    isRecording = false;
-                    //recordButton.setText("녹음");
-                }
+                    pitchButton.setTextColor(Color.parseColor("#FF000000"));
+                    recordAudio2(330.000f);
             }
         });
+
+        pitchbutton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                recordAudio2(294.000f);
+            }
+        });
+        pitchbutton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                recordAudio2(262.000f);
+            }
+        });
+        pitchbutton4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                recordAudio2(294.000f);
+            }
+        });
+        pitchbutton5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                recordAudio2(330.000f);
+            }
+        });
+        pitchbutton6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                recordAudio2(330.000f);
+            }
+        });
+        pitchbutton7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                recordAudio2(330.000f);
+            }
+        });
+
     }
 
 
-    public void recordAudio()
+    /*public void recordAudio()
     {
         releaseDispatcher();
         dispatcher = AudioDispatcherFactory.fromDefaultMicrophone(22050,1024,0);
@@ -134,12 +170,56 @@ public class PartPractice extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
+    }*/
 
-    public void stopRecording()
+    public void recordAudio2(float note)
     {
         releaseDispatcher();
-    } //녹음 중지
+        dispatcher = AudioDispatcherFactory.fromDefaultMicrophone(22050,1024,0);
+
+        try {
+            RandomAccessFile randomAccessFile = new RandomAccessFile(file,"rw");
+            AudioProcessor recordProcessor = new WriterProcessor(tarsosDSPAudioFormat, randomAccessFile);
+            dispatcher.addAudioProcessor(recordProcessor);
+
+            PitchDetectionHandler pitchDetectionHandler = new PitchDetectionHandler() {
+                @Override
+                public void handlePitch(PitchDetectionResult res, AudioEvent e){
+                    final float pitchInHz = res.getPitch();
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            pitchTextView.setText(pitchInHz + "");
+                            if(Float.compare(pitchInHz, note - 5.000f) < 0){
+                                pitchline.setColorFilter(null);
+                                lowPitch.setTextColor(Color.parseColor("#e65d5d"));
+                                highPitch.setTextColor(Color.parseColor("#0a0a0a"));
+                            }else if(Float.compare(pitchInHz, note + 5.000f) > 0){
+                                pitchline.setColorFilter(null);
+                                lowPitch.setTextColor(Color.parseColor("#0a0a0a"));
+                                highPitch.setTextColor(Color.parseColor("#e65d5d"));
+                            }else{
+                                pitchline.setColorFilter(Color.parseColor("#82fa46"), PorterDuff.Mode.SRC_IN);
+                                lowPitch.setTextColor(Color.parseColor("#0a0a0a"));
+                                highPitch.setTextColor(Color.parseColor("#0a0a0a"));
+                            }
+                        }
+                    });
+                }
+            };
+
+            AudioProcessor pitchProcessor = new PitchProcessor(PitchProcessor.PitchEstimationAlgorithm.FFT_YIN, 22050, 1024, pitchDetectionHandler);
+            dispatcher.addAudioProcessor(pitchProcessor);
+
+            Thread audioThread = new Thread(dispatcher, "Audio Thread");
+            audioThread.start();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 
     public void releaseDispatcher()
     {

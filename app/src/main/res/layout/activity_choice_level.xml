@@ -8,29 +8,6 @@
     tools:context=".MainActivity"
     android:background="@drawable/backlevel">
 
-   <!-- <ImageButton
-        android:id="@+id/levelhigh"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scaleType="center"
-        android:layout_weight="1"
-        android:src="@drawable/level_high"/>
-
-    <ImageButton
-        android:id="@+id/levelmiddle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scaleType="center"
-        android:layout_weight="1"
-        android:src="@drawable/level_middle"/>
-
-    <ImageButton
-        android:id="@+id/levellow"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scaleType="center"
-        android:layout_weight="1"
-        android:src="@drawable/level_low"/>-->
 
     <Button
         android:id="@+id/levelhigh"
