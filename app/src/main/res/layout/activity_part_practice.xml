@@ -125,13 +125,14 @@
     </LinearLayout>
 
     <TextView
-    android:id="@+id/pitchTextView"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:text="0"
-    android:textColor="#000000"
-    android:textSize="50sp" />
+        android:layout_margin="10dp"
+        android:id="@+id/pitchTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:text="0"
+        android:textColor="#000000"
+        android:textSize="50sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -141,10 +142,9 @@
         <TextView
             android:id="@+id/highpitch"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="50dp"
             android:layout_gravity="center"
-            android:layout_weight="1"
-            android:fontFamily="casual"
+            android:fontFamily="@font/scdream2"
             android:text="Too high!"
             android:textSize="30dp" />
 
@@ -152,18 +152,17 @@
             android:id="@+id/pitchline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="25dp"
+            android:layout_margin="35dp"
             app:srcCompat="@drawable/pitchline" />
 
         <TextView
             android:id="@+id/lowpitch"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:fontFamily="casual"
+            android:fontFamily="@font/scdream2"
             android:text="Too low!"
-            android:textSize="30dp"
-            android:layout_weight="1"/>
+            android:textSize="30dp" />
 
     </LinearLayout>
 

@@ -147,7 +147,7 @@ public class PartPractice extends AppCompatActivity {
             AudioProcessor recordProcessor = new WriterProcessor(tarsosDSPAudioFormat, randomAccessFile);
             dispatcher.addAudioProcessor(recordProcessor);
 
-            PitchDetectionHandler pitchDetectionHandler = new PitchDetectionHandler() {
+           PitchDetectionHandler pitchDetectionHandler = new PitchDetectionHandler() {
                 @Override
                 public void handlePitch(PitchDetectionResult res, AudioEvent e){
                     final float pitchInHz = res.getPitch();
@@ -167,12 +167,12 @@ public class PartPractice extends AppCompatActivity {
                                 pitchline.setColorFilter(Color.parseColor("#82fa46"), PorterDuff.Mode.SRC_IN);
                                 lowPitch.setTextColor(Color.parseColor("#0a0a0a"));
                                 highPitch.setTextColor(Color.parseColor("#0a0a0a"));
+
                             }
                         }
                     });
                 }
             };
-
             AudioProcessor pitchProcessor = new PitchProcessor(PitchProcessor.PitchEstimationAlgorithm.FFT_YIN, 22050, 1024, pitchDetectionHandler);
             dispatcher.addAudioProcessor(pitchProcessor);
 

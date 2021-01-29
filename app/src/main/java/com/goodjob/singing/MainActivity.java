@@ -11,12 +11,13 @@ import android.view.View.OnClickListener;
 
 public class MainActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+      //  Animation ani = AnimationUtils.LoadA
         Button click_start = (Button)findViewById(R.id.button1);
         click_start.setOnClickListener(new OnClickListener() {
             @Override
