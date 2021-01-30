@@ -25,7 +25,7 @@
             android:scaleType="center"
             android:src="@drawable/usingbutton"
             android:background="@drawable/click_use"/>-->
-        <Button
+       <Button
             android:id="@+id/button1"
             android:drawableLeft="@drawable/ic_free_icon_diamond_636601"
             android:fontFamily="@font/scdream2"
@@ -37,7 +37,6 @@
             android:layout_width="match_parent"
             android:layout_height="0px"
             android:layout_weight="1"     />
-
         <Button
             android:id="@+id/button2"
             android:background="?selectableItemBackground"
