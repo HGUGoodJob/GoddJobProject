@@ -147,7 +147,7 @@ public class PartPractice extends AppCompatActivity {
             AudioProcessor recordProcessor = new WriterProcessor(tarsosDSPAudioFormat, randomAccessFile);
             dispatcher.addAudioProcessor(recordProcessor);
 
-           PitchDetectionHandler pitchDetectionHandler = new PitchDetectionHandler() {
+            PitchDetectionHandler pitchDetectionHandler = new PitchDetectionHandler() {
                 @Override
                 public void handlePitch(PitchDetectionResult res, AudioEvent e){
                     final float pitchInHz = res.getPitch();
