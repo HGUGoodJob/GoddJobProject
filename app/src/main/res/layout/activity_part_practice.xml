@@ -14,111 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleType="centerInside"
-        android:src="@drawable/firstscore"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/pitchbutton3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="?selectableItemBackground"
-        android:fontFamily="@font/scdream2"
-        android:text="떴"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:theme="@style/AppTheme.BlueRipple"
-        app:layout_constraintStart_toStartOf="@+id/pitchbutton7"
-        app:layout_constraintTop_toBottomOf="@+id/firstmusicscore" />
-
-    <Button
-        android:id="@+id/pitchButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
-        android:background="?selectableItemBackground"
-        android:fontFamily="@font/scdream2"
-        android:text="떴"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:theme="@style/AppTheme.BlueRipple"
-        app:layout_constraintBaseline_toBaselineOf="@+id/pitchbutton2"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/pitchbutton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="?selectableItemBackground"
-        android:fontFamily="@font/scdream2"
-        android:text="다"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:theme="@style/AppTheme.BlueRipple"
-        app:layout_constraintStart_toEndOf="@+id/pitchbutton5"
-        app:layout_constraintTop_toBottomOf="@+id/firstmusicscore" />
-
-    <Button
-        android:id="@+id/pitchbutton5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
-        android:background="?selectableItemBackground"
-        android:fontFamily="@font/scdream2"
-        android:text="비"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:theme="@style/AppTheme.BlueRipple"
-        app:layout_constraintBaseline_toBaselineOf="@+id/pitchbutton6"
-        app:layout_constraintEnd_toStartOf="@+id/pitchbutton6"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/pitchbutton8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="?selectableItemBackground"
-        android:fontFamily="@font/scdream2"
-        android:text=""
-        android:textSize="20dp"
-        android:theme="@style/AppTheme.BlueRipple"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/pitchbutton7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pitchbutton4" />
-
-    <Button
-        android:id="@+id/pitchbutton6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="?selectableItemBackground"
-        android:fontFamily="@font/scdream2"
-        android:text="행"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:theme="@style/AppTheme.BlueRipple"
-        app:layout_constraintEnd_toStartOf="@+id/pitchbutton7"
-        app:layout_constraintStart_toEndOf="@+id/pitchbutton5"
-        app:layout_constraintTop_toBottomOf="@+id/pitchButton" />
-
-    <Button
-        android:id="@+id/pitchbutton7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="1dp"
-        android:background="?selectableItemBackground"
-        android:fontFamily="@font/scdream2"
-        android:text="기"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:theme="@style/AppTheme.BlueRipple"
-        app:layout_constraintBaseline_toBaselineOf="@+id/pitchbutton6"
-        app:layout_constraintEnd_toStartOf="@+id/pitchbutton8"
-        app:layout_constraintStart_toEndOf="@+id/pitchbutton6" />
+        android:src="@drawable/firstscore" />
 
     <Button
         android:id="@+id/pitchbutton4"
@@ -130,55 +26,136 @@
         android:textColor="@color/white"
         android:textSize="20dp"
         android:theme="@style/AppTheme.BlueRipple"
-        app:layout_constraintBaseline_toBaselineOf="@+id/pitchbutton3"
-        app:layout_constraintStart_toEndOf="@+id/pitchbutton3" />
+        tools:layout_editor_absoluteX="299dp"
+        tools:layout_editor_absoluteY="231dp" />
+
+    <Button
+        android:id="@+id/pitchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:fontFamily="@font/scdream2"
+        android:text="떴"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:theme="@style/AppTheme.BlueRipple"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="231dp" />
+
+    <Button
+        android:id="@+id/pitchbutton8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:fontFamily="@font/scdream2"
+        android:text=""
+        android:textSize="20dp"
+        android:theme="@style/AppTheme.BlueRipple"
+        tools:layout_editor_absoluteX="299dp"
+        tools:layout_editor_absoluteY="279dp" />
+
+    <Button
+        android:id="@+id/pitchbutton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:fontFamily="@font/scdream2"
+        android:text="떴"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:theme="@style/AppTheme.BlueRipple"
+        tools:layout_editor_absoluteX="207dp"
+        tools:layout_editor_absoluteY="231dp" />
+
+    <Button
+        android:id="@+id/pitchbutton6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:fontFamily="@font/scdream2"
+        android:text="행"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:theme="@style/AppTheme.BlueRipple"
+        tools:layout_editor_absoluteX="119dp"
+        tools:layout_editor_absoluteY="279dp" />
+
+    <Button
+        android:id="@+id/pitchbutton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:fontFamily="@font/scdream2"
+        android:text="비"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:theme="@style/AppTheme.BlueRipple"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="279dp" />
+
+    <Button
+        android:id="@+id/pitchbutton7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:fontFamily="@font/scdream2"
+        android:text="기"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:theme="@style/AppTheme.BlueRipple"
+        tools:layout_editor_absoluteX="207dp"
+        tools:layout_editor_absoluteY="279dp" />
+
+    <Button
+        android:id="@+id/pitchbutton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:fontFamily="@font/scdream2"
+        android:text="다"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:theme="@style/AppTheme.BlueRipple"
+        tools:layout_editor_absoluteX="119dp"
+        tools:layout_editor_absoluteY="231dp" />
 
     <TextView
         android:id="@+id/pitchTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="14dp"
         android:text="0"
         android:textColor="#000000"
         android:textSize="50sp"
-        app:layout_constraintBottom_toTopOf="@+id/highpitch"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:layout_editor_absoluteX="191dp"
+        tools:layout_editor_absoluteY="392dp" />
 
     <TextView
         android:id="@+id/highpitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
         android:fontFamily="@font/scdream2"
         android:text="Too high!"
         android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/pitchline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="495dp" />
 
     <ImageView
         android:id="@+id/pitchline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="115dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/pitchline" />
+        app:srcCompat="@drawable/pitchline"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="580dp" />
 
     <TextView
         android:id="@+id/lowpitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
         android:fontFamily="@font/scdream2"
         android:text="Too low!"
         android:textSize="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pitchline" />
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="638dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
