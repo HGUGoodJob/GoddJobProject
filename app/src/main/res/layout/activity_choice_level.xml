@@ -1,52 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:background="@drawable/backlevel">
+    android:background="@drawable/backlevel"
+    tools:context=".MainActivity">
 
 
     <Button
         android:id="@+id/levelhigh"
-        android:layout_gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="?selectableItemBackground"
-        android:theme="@style/AppTheme.BlueRipple"
         android:drawableLeft="@drawable/ic_free_icon_musical_note_126493"
         android:fontFamily="@font/scdream2"
         android:paddingLeft="140dp"
         android:text="@string/high"
         android:textSize="30dp"
-        android:layout_width="match_parent"
-        android:layout_height="0px"
-        android:layout_weight="1"     />
+        android:theme="@style/AppTheme.BlueRipple"
+        app:layout_constraintBottom_toTopOf="@+id/levelmiddle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/levelmiddle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="?selectableItemBackground"
-        android:theme="@style/AppTheme.BlueRipple"
         android:drawableLeft="@drawable/ic_free_icon_musical_note_126493"
         android:fontFamily="@font/scdream2"
         android:paddingLeft="140dp"
         android:text="@string/middle"
         android:textSize="30dp"
-        android:layout_width="match_parent"
-        android:layout_height="0px"
-        android:layout_weight="1" />
+        android:theme="@style/AppTheme.BlueRipple"
+        app:layout_constraintBottom_toTopOf="@+id/levellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/levelhigh" />
 
     <Button
         android:id="@+id/levellow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="?selectableItemBackground"
-        android:theme="@style/AppTheme.BlueRipple"
         android:drawableLeft="@drawable/ic_free_icon_musical_note_126493"
         android:fontFamily="@font/scdream2"
         android:paddingLeft="140dp"
         android:text="@string/low"
         android:textSize="30dp"
-        android:layout_width="match_parent"
-        android:layout_height="0px"
-        android:layout_weight="1"    />
+        android:theme="@style/AppTheme.BlueRipple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/levelmiddle" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
