@@ -25,6 +25,8 @@
         <activity android:name=".PartPractice" />
         <activity android:name=".ChoiceLevel" />
         <activity android:name=".PartPractice_Plane2" />
+        <activity android:name=".PartPractice_Plane3" />
+        <activity android:name=".PartPractice_Plane4" />
     </application>
 
 </manifest>
