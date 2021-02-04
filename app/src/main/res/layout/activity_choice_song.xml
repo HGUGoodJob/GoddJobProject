@@ -12,7 +12,6 @@
         android:id="@+id/song_plane"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:background="?selectableItemBackground"
         android:drawableLeft="@drawable/ic_free_icon_diamond_636600"
         android:fontFamily="@font/scdream2"
