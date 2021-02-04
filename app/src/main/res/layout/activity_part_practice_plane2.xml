@@ -70,10 +70,8 @@
         android:id="@+id/firstmusicscore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="129dp"
         android:scaleType="centerInside"
         android:src="@drawable/firstscore"
-        app:layout_constraintBottom_toTopOf="@+id/next"
         app:layout_constraintEnd_toStartOf="@+id/pitchbutton3"
         app:layout_constraintStart_toStartOf="@+id/pitchbutton3"
         app:layout_constraintTop_toTopOf="parent" />

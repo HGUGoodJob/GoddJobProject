@@ -33,14 +33,14 @@ import be.tarsos.dsp.pitch.PitchDetectionResult;
 import be.tarsos.dsp.pitch.PitchProcessor;
 import be.tarsos.dsp.writer.WriterProcessor;
 
-public class PartPractice extends AppCompatActivity {
+public class PartPractice_Plane2 extends AppCompatActivity {
     AudioDispatcher dispatcher;
     TarsosDSPAudioFormat tarsosDSPAudioFormat;  //TarsosDSP Format 세팅
 
     File file;
 
     TextView pitchTextView;
-    Button pitchButton, pitchbutton2, pitchbutton3, pitchbutton4, pitchbutton5, pitchbutton6, pitchbutton7 ; //recordButton -> pitchButton
+    Button pitchButton, pitchbutton2, pitchbutton3, pitchbutton4, pitchbutton5, pitchbutton6, pitchbutton7; //recordButton -> pitchButton
     ImageButton next;
     TextView highPitch;
     TextView lowPitch;
@@ -51,7 +51,7 @@ public class PartPractice extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_part_practice);
+        setContentView(R.layout.activity_part_practice_plane2);
 
         File sdCard = Environment.getExternalStorageDirectory();
         file = new File(sdCard, filename);
@@ -147,6 +147,8 @@ public class PartPractice extends AppCompatActivity {
         });
 
     }
+
+
 
     public void recordAudio2(float note)
     {

@@ -2,21 +2,18 @@ package com.goodjob.singing;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.ColorSpace;
 import android.graphics.PorterDuff;
-import android.os.Environment;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.nio.ByteOrder;
@@ -25,15 +22,13 @@ import be.tarsos.dsp.AudioDispatcher;
 import be.tarsos.dsp.AudioEvent;
 import be.tarsos.dsp.AudioProcessor;
 import be.tarsos.dsp.io.TarsosDSPAudioFormat;
-import be.tarsos.dsp.io.UniversalAudioInputStream;
-import be.tarsos.dsp.io.android.AndroidAudioPlayer;
 import be.tarsos.dsp.io.android.AudioDispatcherFactory;
 import be.tarsos.dsp.pitch.PitchDetectionHandler;
 import be.tarsos.dsp.pitch.PitchDetectionResult;
 import be.tarsos.dsp.pitch.PitchProcessor;
 import be.tarsos.dsp.writer.WriterProcessor;
 
-public class PartPractice extends AppCompatActivity {
+public class PartPractice_Plane4 extends AppCompatActivity {
     AudioDispatcher dispatcher;
     TarsosDSPAudioFormat tarsosDSPAudioFormat;  //TarsosDSP Format 세팅
 
@@ -41,7 +36,6 @@ public class PartPractice extends AppCompatActivity {
 
     TextView pitchTextView;
     Button pitchButton, pitchbutton2, pitchbutton3, pitchbutton4, pitchbutton5, pitchbutton6, pitchbutton7 ; //recordButton -> pitchButton
-    ImageButton next;
     TextView highPitch;
     TextView lowPitch;
     ImageView pitchline;
@@ -51,7 +45,7 @@ public class PartPractice extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_part_practice);
+        setContentView(R.layout.activity_part_practice_plane4);
 
         File sdCard = Environment.getExternalStorageDirectory();
         file = new File(sdCard, filename);
@@ -75,16 +69,6 @@ public class PartPractice extends AppCompatActivity {
         highPitch = findViewById(R.id.highpitch);
         lowPitch = findViewById(R.id.lowpitch);
         pitchline = findViewById(R.id.pitchline);
-        next = findViewById(R.id.next);
-
-        next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent (
-                        getApplicationContext(), PartPractice_Plane2.class);
-                startActivity(intent);
-            }
-        });
 
         pitchButton.setOnClickListener(new View.OnClickListener() {
             //녹음 버튼을 누르면 녹음 실행
