@@ -81,7 +81,7 @@ public class PartPractice_Plane2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent (
-                        getApplicationContext(), PartPractice_Plane2.class);
+                        getApplicationContext(), PartPractice_Plane3.class);
                 startActivity(intent);
             }
         });
