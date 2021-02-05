@@ -6,18 +6,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backsonglist"
-    tools:context=".ChoiceSong">
+    tools:context=".MiddleChoiceSong">
 
     <Button
-        android:id="@+id/song_plane"
+        android:id="@+id/song_bear"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:background="?selectableItemBackground"
         android:drawableLeft="@drawable/ic_free_icon_diamond_636600"
         android:fontFamily="@font/scdream2"
         android:paddingLeft="40dp"
         android:scaleType="centerInside"
-        android:text="@string/strBtn1"
+        android:text="@string/strBtn4"
         android:textSize="20dp"
         android:theme="@style/AppTheme.BlueRipple"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,7 +27,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/song_star"
+        android:id="@+id/song_middle2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="?selectableItemBackground"
@@ -34,30 +35,29 @@
         android:fontFamily="@font/scdream2"
         android:paddingLeft="40dp"
         android:scaleType="centerInside"
-        android:text="@string/strBtn2"
+        android:text="@string/strBtn5"
         android:textSize="20dp"
         android:theme="@style/AppTheme.BlueRipple"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/song_plane" />
+        app:layout_constraintTop_toBottomOf="@+id/song_bear" />
 
     <Button
-        android:id="@+id/songbutton3"
+        android:id="@+id/song_middle3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="?selectableItemBackground"
         android:drawableLeft="@drawable/ic_free_icon_diamond_636600"
         android:fontFamily="@font/scdream2"
         android:paddingLeft="40dp"
-        android:text="@string/strBtn3"
+        android:text="@string/strBtn6"
         android:textSize="20dp"
-
         android:theme="@style/AppTheme.BlueRipple"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/song_star" />
+        app:layout_constraintTop_toBottomOf="@+id/song_middle2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,13 +15,24 @@ public class ChoiceLevel extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choice_level);
 
-        Button click_start = (Button)findViewById(R.id.levellow);
-        click_start.setOnClickListener(new View.OnClickListener() {
+        Button start_low = (Button)findViewById(R.id.levellow);
+        Button start_middle = (Button)findViewById(R.id.levelmiddle);
+
+        start_low.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent (
-                        getApplicationContext(), ChoiceSong.class);
-                startActivity(intent);
+                Intent intent1 = new Intent (
+                        getApplicationContext(), LowChoiceSong.class);
+                startActivity(intent1);
+            }
+        });
+
+        start_middle.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent2 = new Intent (
+                        getApplicationContext(), MiddleChoiceSong.class);
+                startActivity(intent2);
             }
         });
     }

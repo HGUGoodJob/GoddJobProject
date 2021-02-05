@@ -1,26 +1,25 @@
 package com.goodjob.singing;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 
-public class ChoiceSong extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MiddleChoiceSong extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_choice_song);
+        setContentView(R.layout.activity_middle_choice_song);
+        Button start_bear = (Button)findViewById(R.id.song_bear);
 
-        Button click_start = (Button)findViewById(R.id.song_plane);
-        click_start.setOnClickListener(new View.OnClickListener() {
+        start_bear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent (
-                        getApplicationContext(), PartPractice.class);
+                        getApplicationContext(), PartPracticeBear1.class);
                 startActivity(intent);
             }
         });
