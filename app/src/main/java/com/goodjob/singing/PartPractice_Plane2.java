@@ -40,8 +40,8 @@ public class PartPractice_Plane2 extends AppCompatActivity {
     File file;
 
     TextView pitchTextView;
-    Button pitchButton, pitchbutton2, pitchbutton3, pitchbutton4, pitchbutton5, pitchbutton6, pitchbutton7; //recordButton -> pitchButton
-    ImageButton next;
+    Button pitchButton, pitchbutton2, pitchbutton3, pitchbutton4, pitchbutton5, pitchbutton6, pitchbutton7, pitchbutton8; //recordButton -> pitchButton
+    ImageButton next, last;
     TextView highPitch;
     TextView lowPitch;
     ImageView pitchline;
@@ -72,16 +72,27 @@ public class PartPractice_Plane2 extends AppCompatActivity {
         pitchbutton5 = findViewById(R.id.pitchbutton5);
         pitchbutton6 = findViewById(R.id.pitchbutton6);
         pitchbutton7 = findViewById(R.id.pitchbutton7);
+        pitchbutton8 = findViewById(R.id.pitchbutton8);
         highPitch = findViewById(R.id.highpitch);
         lowPitch = findViewById(R.id.lowpitch);
         pitchline = findViewById(R.id.pitchline);
         next = findViewById(R.id.next);
+        last= findViewById(R.id.last);
 
-        next.setOnClickListener(new View.OnClickListener() {
+        next.setOnClickListener(new View.OnClickListener() { //다음마디
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent (
                         getApplicationContext(), PartPractice_Plane3.class);
+                startActivity(intent);
+            }
+        });
+
+        last.setOnClickListener(new View.OnClickListener() { //이전마디
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (
+                        getApplicationContext(), PartPractice.class);
                 startActivity(intent);
             }
         });
@@ -93,7 +104,7 @@ public class PartPractice_Plane2 extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchButton.setSelected(true);
-                recordAudio2(330.000f);
+                recordAudio2(294.000f);
             }
         });
 
@@ -110,39 +121,31 @@ public class PartPractice_Plane2 extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton3.setSelected(true);
-                recordAudio2(262.000f);
-            }
-        });
-        pitchbutton4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                buttonColored();
-                pitchbutton4.setSelected(true);
-                recordAudio2(294.000f);
-            }
-        });
-        pitchbutton5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                buttonColored();
-                pitchbutton5.setSelected(true);
-                recordAudio2(330.000f);
+                recordAudio2(294.000f); //레
             }
         });
         pitchbutton6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 buttonColored();
-                pitchbutton6.setSelected(true);
-                recordAudio2(330.000f);
+                pitchbutton5.setSelected(true);
+                recordAudio2(330.000f); //미
             }
         });
         pitchbutton7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 buttonColored();
+                pitchbutton6.setSelected(true);
+                recordAudio2(392.000f); //솔
+            }
+        });
+        pitchbutton8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                buttonColored();
                 pitchbutton7.setSelected(true);
-                recordAudio2(330.000f);
+                recordAudio2(392.000f);
             }
         });
 

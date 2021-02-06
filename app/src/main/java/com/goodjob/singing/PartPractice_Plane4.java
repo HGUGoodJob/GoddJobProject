@@ -37,6 +37,7 @@ public class PartPractice_Plane4 extends AppCompatActivity {
     TextView pitchTextView;
     Button pitchButton, pitchbutton2, pitchbutton3, pitchbutton4, pitchbutton5, pitchbutton6, pitchbutton7 ; //recordButton -> pitchButton
     TextView highPitch;
+    ImageButton last;
     TextView lowPitch;
     ImageView pitchline;
     String filename = "recorded_sound.wav";
@@ -69,6 +70,16 @@ public class PartPractice_Plane4 extends AppCompatActivity {
         highPitch = findViewById(R.id.highpitch);
         lowPitch = findViewById(R.id.lowpitch);
         pitchline = findViewById(R.id.pitchline);
+        last = findViewById(R.id.last);
+
+        last.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (
+                        getApplicationContext(), PartPractice_Plane3.class);
+                startActivity(intent);
+            }
+        });
 
         pitchButton.setOnClickListener(new View.OnClickListener() {
             //녹음 버튼을 누르면 녹음 실행
@@ -77,7 +88,7 @@ public class PartPractice_Plane4 extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchButton.setSelected(true);
-                recordAudio2(330.000f);
+                recordAudio2(294.000f); //레 (우)
             }
         });
 
@@ -86,23 +97,7 @@ public class PartPractice_Plane4 extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton2.setSelected(true);
-                recordAudio2(294.000f);
-            }
-        });
-        pitchbutton3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                buttonColored();
-                pitchbutton3.setSelected(true);
-                recordAudio2(262.000f);
-            }
-        });
-        pitchbutton4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                buttonColored();
-                pitchbutton4.setSelected(true);
-                recordAudio2(294.000f);
+                recordAudio2(294.000f); //레 (리)
             }
         });
         pitchbutton5.setOnClickListener(new View.OnClickListener() {
@@ -110,7 +105,7 @@ public class PartPractice_Plane4 extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton5.setSelected(true);
-                recordAudio2(330.000f);
+                recordAudio2(330.000f); //미 (비)
             }
         });
         pitchbutton6.setOnClickListener(new View.OnClickListener() {
@@ -118,7 +113,7 @@ public class PartPractice_Plane4 extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton6.setSelected(true);
-                recordAudio2(330.000f);
+                recordAudio2(294.000f); //레 (행)
             }
         });
         pitchbutton7.setOnClickListener(new View.OnClickListener() {
@@ -126,7 +121,7 @@ public class PartPractice_Plane4 extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton7.setSelected(true);
-                recordAudio2(330.000f);
+                recordAudio2(262.000f); //도 (기)
             }
         });
 
