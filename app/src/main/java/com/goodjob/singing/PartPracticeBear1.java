@@ -1,22 +1,17 @@
 package com.goodjob.singing;
 
-import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.ColorSpace;
 import android.graphics.PorterDuff;
-import android.os.Environment;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.nio.ByteOrder;
@@ -25,23 +20,21 @@ import be.tarsos.dsp.AudioDispatcher;
 import be.tarsos.dsp.AudioEvent;
 import be.tarsos.dsp.AudioProcessor;
 import be.tarsos.dsp.io.TarsosDSPAudioFormat;
-import be.tarsos.dsp.io.UniversalAudioInputStream;
-import be.tarsos.dsp.io.android.AndroidAudioPlayer;
 import be.tarsos.dsp.io.android.AudioDispatcherFactory;
 import be.tarsos.dsp.pitch.PitchDetectionHandler;
 import be.tarsos.dsp.pitch.PitchDetectionResult;
 import be.tarsos.dsp.pitch.PitchProcessor;
 import be.tarsos.dsp.writer.WriterProcessor;
 
-public class PartPractice extends AppCompatActivity {
+public class PartPracticeBear1 extends AppCompatActivity {
     AudioDispatcher dispatcher;
     TarsosDSPAudioFormat tarsosDSPAudioFormat;  //TarsosDSP Format 세팅
 
     File file;
 
     TextView pitchTextView;
-    Button pitchButton, pitchbutton2, pitchbutton3, pitchbutton4, pitchbutton5, pitchbutton6, pitchbutton7 ; //recordButton -> pitchButton
-    ImageButton next;
+    Button pitchButton1, pitchbutton2, pitchbutton3, pitchbutton4, pitchbutton5, pitchbutton6, pitchbutton7, pitchbutton8, pitchbutton9, pitchbutton10;
+    //recordButton -> pitchButton
     TextView highPitch;
     TextView lowPitch;
     ImageView pitchline;
@@ -51,7 +44,7 @@ public class PartPractice extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_part_practice);
+        setContentView(R.layout.activity_part_practice_bear1);
 
         File sdCard = Environment.getExternalStorageDirectory();
         file = new File(sdCard, filename);
@@ -65,35 +58,28 @@ public class PartPractice extends AppCompatActivity {
                 ByteOrder.BIG_ENDIAN.equals(ByteOrder.nativeOrder()));
 
         pitchTextView = findViewById(R.id.pitchTextView);
-        pitchButton = findViewById(R.id.pitchButton);
+        pitchButton1 = findViewById(R.id.pitchButton1);
         pitchbutton2 = findViewById(R.id.pitchbutton2);
         pitchbutton3 = findViewById(R.id.pitchbutton3);
         pitchbutton4 = findViewById(R.id.pitchbutton4);
         pitchbutton5 = findViewById(R.id.pitchbutton5);
         pitchbutton6 = findViewById(R.id.pitchbutton6);
         pitchbutton7 = findViewById(R.id.pitchbutton7);
+        pitchbutton8 = findViewById(R.id.pitchbutton8);
+        pitchbutton9 = findViewById(R.id.pitchbutton9);
+        pitchbutton10 = findViewById(R.id.pitchbutton10);
         highPitch = findViewById(R.id.highpitch);
         lowPitch = findViewById(R.id.lowpitch);
         pitchline = findViewById(R.id.pitchline);
-        next = findViewById(R.id.next);
 
-        next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent (
-                        getApplicationContext(), PartPractice_Plane2.class);
-                startActivity(intent);
-            }
-        });
+        //도: 262.000f 레: 294.000f 미: 330.000f 솔: 392.000f
 
-        pitchButton.setOnClickListener(new View.OnClickListener() {
-            //녹음 버튼을 누르면 녹음 실행
-
+        pitchButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 buttonColored();
-                pitchButton.setSelected(true);
-                recordAudio2(330.000f);
+                pitchButton1.setSelected(true);
+                recordAudio2(262.000f);
             }
         });
 
@@ -102,7 +88,7 @@ public class PartPractice extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton2.setSelected(true);
-                recordAudio2(294.000f);
+                recordAudio2(262.000f);
             }
         });
         pitchbutton3.setOnClickListener(new View.OnClickListener() {
@@ -121,12 +107,13 @@ public class PartPractice extends AppCompatActivity {
                 recordAudio2(294.000f);
             }
         });
+
         pitchbutton5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton5.setSelected(true);
-                recordAudio2(330.000f);
+                recordAudio2(294.000f);
             }
         });
         pitchbutton6.setOnClickListener(new View.OnClickListener() {
@@ -142,11 +129,40 @@ public class PartPractice extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton7.setSelected(true);
+                recordAudio2(392.000f);
+            }
+        });
+        pitchbutton8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                buttonColored();
+                pitchbutton8.setSelected(true);
+                recordAudio2(392.000f);
+            }
+        });
+
+        pitchbutton9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                buttonColored();
+                pitchbutton9.setSelected(true);
                 recordAudio2(330.000f);
             }
         });
 
+
+        pitchbutton10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                buttonColored();
+                pitchbutton10.setSelected(true);
+                recordAudio2(262.000f);
+            }
+        });
+
     }
+
+
 
     public void recordAudio2(float note)
     {
@@ -197,13 +213,16 @@ public class PartPractice extends AppCompatActivity {
 
 
     public void buttonColored(){
-        pitchButton.setSelected(false);
+        pitchButton1.setSelected(false);
         pitchbutton2.setSelected(false);
         pitchbutton3.setSelected(false);
         pitchbutton4.setSelected(false);
         pitchbutton5.setSelected(false);
         pitchbutton6.setSelected(false);
         pitchbutton7.setSelected(false);
+        pitchbutton8.setSelected(false);
+        pitchbutton9.setSelected(false);
+        pitchbutton10.setSelected(false);
     }
     public void releaseDispatcher()
     {
