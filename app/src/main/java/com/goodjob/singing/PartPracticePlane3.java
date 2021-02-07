@@ -28,7 +28,7 @@ import be.tarsos.dsp.pitch.PitchDetectionResult;
 import be.tarsos.dsp.pitch.PitchProcessor;
 import be.tarsos.dsp.writer.WriterProcessor;
 
-public class PartPractice_Plane3 extends AppCompatActivity {
+public class PartPracticePlane3 extends AppCompatActivity {
     AudioDispatcher dispatcher;
     TarsosDSPAudioFormat tarsosDSPAudioFormat;  //TarsosDSP Format 세팅
 
@@ -77,7 +77,7 @@ public class PartPractice_Plane3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent (
-                        getApplicationContext(), PartPractice_Plane4.class);
+                        getApplicationContext(), PartPracticePlane4.class);
                 startActivity(intent);
             }
         });
@@ -86,7 +86,7 @@ public class PartPractice_Plane3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent (
-                        getApplicationContext(), PartPractice_Plane2.class);
+                        getApplicationContext(), PartPracticePlane2.class);
                 startActivity(intent);
             }
         });
