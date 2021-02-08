@@ -1,11 +1,13 @@
 package com.goodjob.singing;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -33,6 +35,7 @@ public class PartPracticeBear3 extends AppCompatActivity {
     File file;
 
     TextView pitchTextView;
+    ImageButton next;
     Button pitchButton1, pitchbutton2, pitchbutton3, pitchbutton4, pitchbutton5, pitchbutton6, pitchbutton7;
     //recordButton -> pitchButton
     TextView highPitch;
@@ -65,9 +68,18 @@ public class PartPracticeBear3 extends AppCompatActivity {
         pitchbutton5 = findViewById(R.id.pitchbutton5);
         pitchbutton6 = findViewById(R.id.pitchbutton6);
         pitchbutton7 = findViewById(R.id.pitchbutton7);
+        next = findViewById(R.id.next);
         highPitch = findViewById(R.id.highpitch);
         lowPitch = findViewById(R.id.lowpitch);
-        pitchline = findViewById(R.id.pitchline);
+
+        pitchline = findViewById(R.id.pitchline);next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (
+                        getApplicationContext(), PartPracticeBear4.class);
+                startActivity(intent);
+            }
+        });
 
         //도: 262.000f 레: 294.000f 미: 330.000f 솔: 392.000f
         //솔솔미도 솔솔솔
