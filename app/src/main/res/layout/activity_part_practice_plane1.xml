@@ -8,6 +8,21 @@
     android:background="@drawable/back"
     android:orientation="vertical">
 
+
+    <Button
+        android:id="@+id/playVib"
+        android:layout_width="70dp"
+        android:layout_height="51dp"
+        android:theme="@style/AppTheme.BlueRipple"
+        android:background="?selectableItemBackground"
+        android:drawableLeft="@drawable/ic_telephone"
+        app:layout_constraintRight_toRightOf="@+id/planefirstscore"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintTop_toTopOf="@+id/planefirstscore" />
+
+
+
     <ImageView
         android:id="@+id/planefirstscore"
         android:layout_width="wrap_content"
@@ -188,12 +203,12 @@
 
     <ImageButton
         android:id="@+id/next"
-        android:layout_width="52dp"
-        android:layout_height="49dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginStart="23dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="200dp"
-        android:background="@android:drawable/divider_horizontal_dark"
+        android:background="?selectableItemBackground"
         android:onClick="onClick_next"
         android:scaleType="fitCenter"
         android:tint="#9C27B0"

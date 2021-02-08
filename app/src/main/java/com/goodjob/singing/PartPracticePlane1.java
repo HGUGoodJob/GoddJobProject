@@ -1,11 +1,13 @@
 package com.goodjob.singing;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Environment;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -35,6 +37,7 @@ public class PartPracticePlane1 extends AppCompatActivity {
 
     TextView pitchTextView;
     Button pitchButton1, pitchbutton2, pitchbutton3, pitchbutton4, pitchbutton5, pitchbutton6, pitchbutton7 ; //recordButton -> pitchButton
+    Button playVib;
     ImageButton next;
     TextView highPitch;
     TextView lowPitch;
@@ -46,6 +49,9 @@ public class PartPracticePlane1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_part_practice_plane1);
+
+        Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+
 
         File sdCard = Environment.getExternalStorageDirectory();
         file = new File(sdCard, filename);
@@ -70,6 +76,19 @@ public class PartPracticePlane1 extends AppCompatActivity {
         lowPitch = findViewById(R.id.lowpitch);
         pitchline = findViewById(R.id.pitchline);
         next = findViewById(R.id.next);
+        playVib = findViewById(R.id.playVib);
+
+        playVib.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // long[] pattern = {750, 250, 500, 500, 500, 500, 1000};
+                long[] pattern = {100, 100, 650, 100, 150, 100, 400, 100, 400, 100, 400, 100, 400, 100, 400 };
+                //짝수 인덱스 : 대기시간 . 홀수 인덱스 : 진동시간
+
+                vibrator.vibrate(pattern, -1); // -1은 반복없음. 0은 무한반복
+            }
+        });
+
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
