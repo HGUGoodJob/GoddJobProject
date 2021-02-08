@@ -167,14 +167,11 @@
         app:layout_constraintTop_toBottomOf="@+id/pitchbutton5" />
 
 
-
-
     <TextView
         android:id="@+id/pitchTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
-        android:text="1.0"
         android:textColor="#000000"
         android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/highpitch"
@@ -187,7 +184,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:fontFamily="@font/scdream2"
-        android:text="Too high!"
+        android:text="높아요!"
         android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/pitchline"
         app:layout_constraintEnd_toEndOf="parent"
@@ -209,7 +206,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="36dp"
         android:fontFamily="@font/scdream2"
-        android:text="Too low!"
+        android:text="낮아요!"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

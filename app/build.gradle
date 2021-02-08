@@ -36,6 +36,7 @@ dependencies {
     implementation fileTree(dir: '/Users/haram/AndroidStudioProjects/singing/app/libs', include: ['*.aar', '*.jar'], exclude: [])
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.1'
     implementation fileTree(dir: '/Users/daheehan/Downloads', include: ['*.aar', '*.jar'], exclude: [])
+    implementation fileTree(dir: 'C:\\Users\\lyw34\\AndroidStudioProjects\\GoddJobProject\\app\\libs', include: ['*.aar', '*.jar'], exclude: [])
     //implementation fileTree(dir: 'C:\\Users\\lyw34\\AndroidStudioProjects\\GoddJobProject\\app\\libs', include: ['*.aar', '*.jar'], exclude: [])
     //implementation fileTree(dir: '/Users/daheehan/Downloads', include: ['*.aar', '*.jar'], exclude: [])
     //implementation fileTree(dir: 'C:\\Users\\lyw34\\AndroidStudioProjects\\GoddJobProject\\app\\libs', include: ['*.aar', '*.jar'], exclude: [])

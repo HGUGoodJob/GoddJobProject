@@ -187,20 +187,22 @@ public class PartPracticePlane3 extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            pitchTextView.setText(pitchInHz + "");
+                            //pitchTextView.setText(pitchInHz + "");
                             if(Float.compare(pitchInHz, note - 5.000f) < 0){
                                 pitchline.setColorFilter(null);
                                 lowPitch.setTextColor(Color.parseColor("#e65d5d"));
                                 highPitch.setTextColor(Color.parseColor("#0a0a0a"));
+                                pitchTextView.setText("");
                             }else if(Float.compare(pitchInHz, note + 5.000f) > 0){
                                 pitchline.setColorFilter(null);
                                 lowPitch.setTextColor(Color.parseColor("#0a0a0a"));
                                 highPitch.setTextColor(Color.parseColor("#e65d5d"));
+                                pitchTextView.setText("");
                             }else{
                                 pitchline.setColorFilter(Color.parseColor("#82fa46"), PorterDuff.Mode.SRC_IN);
                                 lowPitch.setTextColor(Color.parseColor("#0a0a0a"));
                                 highPitch.setTextColor(Color.parseColor("#0a0a0a"));
-
+                                pitchTextView.setText("정확해요!");
                             }
                         }
                     });
