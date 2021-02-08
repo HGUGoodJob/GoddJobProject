@@ -22,15 +22,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LowChoiceSong" />
-        <activity android:name=".MiddleChoiceSong" />
         <activity android:name=".MainActivity" />
         <activity android:name=".ChoiceLevel" />
-        <activity android:name=".PartPracticeBear1" />
+        <activity android:name=".LowChoiceSong" />
+        <activity android:name=".MiddleChoiceSong" />
         <activity android:name=".PartPracticePlane1" />
         <activity android:name=".PartPracticePlane2" />
         <activity android:name=".PartPracticePlane3" />
         <activity android:name=".PartPracticePlane4" />
+        <activity android:name=".PartPracticeBear1" />
+        <activity android:name=".PartPracticeBear2" />
+        <activity android:name=".PartPracticeBear3" />
+        <activity android:name=".PartPracticeBear4" />
+        <activity android:name=".PartPracticeBear5" />
+        <activity android:name=".PartPracticeBear6" />
     </application>
 
 </manifest>
