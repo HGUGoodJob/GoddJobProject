@@ -42,12 +42,15 @@ public class PartPracticeBear3 extends AppCompatActivity {
     TextView lowPitch;
     ImageView pitchline;
     String filename = "recorded_sound.wav";
-    float note;
+    float note, C, E, G;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_part_practice_bear3);
+
+        Intent intent = getIntent();
+        String sex = intent.getStringExtra("sex");
 
         File sdCard = Environment.getExternalStorageDirectory();
         file = new File(sdCard, filename);
@@ -79,7 +82,7 @@ public class PartPracticeBear3 extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent (
                         getApplicationContext(), PartPracticeBear4.class);
-                //intent.putExtra("sex", sex);
+                intent.putExtra("sex", sex);
                 startActivity(intent);
             }
         });
@@ -89,20 +92,30 @@ public class PartPracticeBear3 extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent (
                         getApplicationContext(), PartPracticeBear2.class);
-                //intent.putExtra("sex", sex);
+                intent.putExtra("sex", sex);
                 startActivity(intent);
             }
         });
 
-        //도: 262.000f 레: 294.000f 미: 330.000f 솔: 392.000f
-        //솔솔미도 솔솔솔
+        if (sex.equals("man")) { //남성음역대 (옥타브3)
+            C = 131.000f; // 도
+            E = 165.000f; // 미
+            G = 196.000f; // 솔
+        }
 
+        else { //여성음역대 or 선택하지 않음 (옥타브4)
+            C = 262.000f;
+            E = 330.000f;
+            G = 392.000f;
+        }
+
+        //솔솔미도 솔솔솔
         pitchButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 buttonColored();
                 pitchButton1.setSelected(true);
-                recordAudio2(392.000f);
+                recordAudio2(G);
             }
         });
 
@@ -111,7 +124,7 @@ public class PartPracticeBear3 extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton2.setSelected(true);
-                recordAudio2(392.000f);
+                recordAudio2(G);
             }
         });
         pitchbutton3.setOnClickListener(new View.OnClickListener() {
@@ -119,7 +132,7 @@ public class PartPracticeBear3 extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton3.setSelected(true);
-                recordAudio2(330.000f);
+                recordAudio2(E);
             }
         });
         pitchbutton4.setOnClickListener(new View.OnClickListener() {
@@ -127,7 +140,7 @@ public class PartPracticeBear3 extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton4.setSelected(true);
-                recordAudio2(262.000f);
+                recordAudio2(C);
             }
         });
 
@@ -136,7 +149,7 @@ public class PartPracticeBear3 extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton5.setSelected(true);
-                recordAudio2(392.000f);
+                recordAudio2(G);
             }
         });
         pitchbutton6.setOnClickListener(new View.OnClickListener() {
@@ -144,7 +157,7 @@ public class PartPracticeBear3 extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton6.setSelected(true);
-                recordAudio2(392.000f);
+                recordAudio2(G);
             }
         });
         pitchbutton7.setOnClickListener(new View.OnClickListener() {
@@ -152,7 +165,7 @@ public class PartPracticeBear3 extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton7.setSelected(true);
-                recordAudio2(392.000f);
+                recordAudio2(G);
             }
         });
 

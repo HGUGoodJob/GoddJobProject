@@ -42,11 +42,7 @@ public class PartPracticeBear1 extends AppCompatActivity {
     TextView lowPitch;
     ImageView pitchline;
     String filename = "recorded_sound.wav";
-    float note;
-    float C;
-    float D;
-    float E;
-    float G;
+    float note, C, D, E, G;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

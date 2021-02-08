@@ -42,12 +42,15 @@ public class PartPracticeBear2 extends AppCompatActivity {
     TextView lowPitch;
     ImageView pitchline;
     String filename = "recorded_sound.wav";
-    float note;
+    float note, C, E, G;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_part_practice_bear2);
+
+        Intent intent = getIntent();
+        String sex = intent.getStringExtra("sex");
 
         File sdCard = Environment.getExternalStorageDirectory();
         file = new File(sdCard, filename);
@@ -60,18 +63,17 @@ public class PartPracticeBear2 extends AppCompatActivity {
                 22050,
                 ByteOrder.BIG_ENDIAN.equals(ByteOrder.nativeOrder()));
 
+        //1,2,3 아빠곰 5,6,7 엄마곰 9,10,11 아기곰
         pitchTextView = findViewById(R.id.pitchTextView);
         pitchButton1 = findViewById(R.id.pitchButton1);
         pitchbutton2 = findViewById(R.id.pitchbutton2);
         pitchbutton3 = findViewById(R.id.pitchbutton3);
-        pitchbutton4 = findViewById(R.id.pitchbutton4);
-        pitchbutton5 = findViewById(R.id.pitchbutton5);
-        pitchbutton6 = findViewById(R.id.pitchbutton6);
-        pitchbutton7 = findViewById(R.id.pitchbutton7);
-        pitchbutton8 = findViewById(R.id.pitchbutton8);
-        pitchbutton9 = findViewById(R.id.pitchbutton9);
-        pitchbutton10 = findViewById(R.id.pitchbutton10);
-        pitchbutton11 = findViewById(R.id.pitchbutton11);
+        pitchbutton4 = findViewById(R.id.pitchbutton5);
+        pitchbutton5 = findViewById(R.id.pitchbutton6);
+        pitchbutton6 = findViewById(R.id.pitchbutton7);
+        pitchbutton7 = findViewById(R.id.pitchbutton9);
+        pitchbutton8 = findViewById(R.id.pitchbutton10);
+        pitchbutton9 = findViewById(R.id.pitchbutton11);
         next = findViewById(R.id.next);
         last = findViewById(R.id.last);
         highPitch = findViewById(R.id.highpitch);
@@ -83,7 +85,7 @@ public class PartPracticeBear2 extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent (
                         getApplicationContext(), PartPracticeBear3.class);
-                //intent.putExtra("sex", sex);
+                intent.putExtra("sex", sex);
                 startActivity(intent);
             }
         });
@@ -93,21 +95,30 @@ public class PartPracticeBear2 extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent (
                         getApplicationContext(), PartPracticeBear1.class);
-                //intent.putExtra("sex", sex);
+                intent.putExtra("sex", sex);
                 startActivity(intent);
             }
         });
 
-        //도: 262.000f 레: 294.000f 미: 330.000f 솔: 392.000f
-        //솔솔미 솔솔미 도도도
+        if (sex.equals("man")) { //남성음역대 (옥타브3)
+            C = 131.000f; // 도
+            E = 165.000f; // 미
+            G = 196.000f; // 솔
+        }
 
-        //1,2,3 아빠곰 5,6,7 엄마곰 9,10,11 아기곰
+        else { //여성음역대 or 선택하지 않음 (옥타브4)
+            C = 262.000f;
+            E = 330.000f;
+            G = 392.000f;
+        }
+
+        //솔솔미 솔솔미 도도도
         pitchButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 buttonColored();
                 pitchButton1.setSelected(true);
-                recordAudio2(392.000f);
+                recordAudio2(G);
             }
         });
 
@@ -116,7 +127,7 @@ public class PartPracticeBear2 extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton2.setSelected(true);
-                recordAudio2(392.000f);
+                recordAudio2(G);
             }
         });
         pitchbutton3.setOnClickListener(new View.OnClickListener() {
@@ -124,62 +135,60 @@ public class PartPracticeBear2 extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton3.setSelected(true);
-                recordAudio2(330.000f);
+                recordAudio2(E);
             }
         });
-        pitchbutton5.setOnClickListener(new View.OnClickListener() {
+        pitchbutton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton5.setSelected(true);
-                recordAudio2(392.000f);
+                recordAudio2(G);
             }
         });
 
-        pitchbutton6.setOnClickListener(new View.OnClickListener() {
+        pitchbutton5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton6.setSelected(true);
-                recordAudio2(392.000f);
+                recordAudio2(G);
+            }
+        });
+        pitchbutton6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                buttonColored();
+                pitchbutton7.setSelected(true);
+                recordAudio2(E);
             }
         });
         pitchbutton7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 buttonColored();
-                pitchbutton7.setSelected(true);
-                recordAudio2(330.000f);
+                pitchbutton9.setSelected(true);
+                recordAudio2(C);
+            }
+        });
+        pitchbutton8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                buttonColored();
+                pitchbutton10.setSelected(true);
+                recordAudio2(C);
             }
         });
         pitchbutton9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 buttonColored();
-                pitchbutton9.setSelected(true);
-                recordAudio2(262.000f);
-            }
-        });
-        pitchbutton10.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                buttonColored();
-                pitchbutton10.setSelected(true);
-                recordAudio2(262.000f);
-            }
-        });
-        pitchbutton11.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                buttonColored();
                 pitchbutton11.setSelected(true);
-                recordAudio2(262.000f);
+                recordAudio2(C);
             }
         });
 
     }
-
-
 
     public void recordAudio2(float note)
     {
@@ -238,8 +247,6 @@ public class PartPracticeBear2 extends AppCompatActivity {
         pitchbutton7.setSelected(false);
         pitchbutton8.setSelected(false);
         pitchbutton9.setSelected(false);
-        pitchbutton10.setSelected(false);
-        pitchbutton11.setSelected(false);
     }
     public void releaseDispatcher()
     {
