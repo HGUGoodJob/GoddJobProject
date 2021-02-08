@@ -35,7 +35,7 @@ public class PartPracticeBear4 extends AppCompatActivity {
     File file;
 
     TextView pitchTextView;
-    ImageButton next;
+    ImageButton next,last;
     Button pitchButton1, pitchbutton2, pitchbutton3, pitchbutton4, pitchbutton5, pitchbutton6, pitchbutton7;
     //recordButton -> pitchButton
     TextView highPitch;
@@ -43,18 +43,11 @@ public class PartPracticeBear4 extends AppCompatActivity {
     ImageView pitchline;
     String filename = "recorded_sound.wav";
     float note;
-    float C;
-    float D;
-    float E;
-    float G;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_part_practice_bear4);
-
-        Intent intent = getIntent();
-        String sex = intent.getStringExtra("sex");
 
         File sdCard = Environment.getExternalStorageDirectory();
         file = new File(sdCard, filename);
@@ -76,33 +69,30 @@ public class PartPracticeBear4 extends AppCompatActivity {
         pitchbutton6 = findViewById(R.id.pitchbutton6);
         pitchbutton7 = findViewById(R.id.pitchbutton7);
         next = findViewById(R.id.next);
+        last = findViewById(R.id.last);
         highPitch = findViewById(R.id.highpitch);
         lowPitch = findViewById(R.id.lowpitch);
         pitchline = findViewById(R.id.pitchline);
 
-        next.setOnClickListener(new View.OnClickListener() {
+        next.setOnClickListener(new View.OnClickListener() { //다음마디
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent (
                         getApplicationContext(), PartPracticeBear5.class);
-                intent.putExtra("sex", sex);
+                //intent.putExtra("sex", sex);
                 startActivity(intent);
             }
         });
 
-        if (sex.equals("man")) { //남성음역대 (옥타브3)
-            C = 131.000f; // 도
-            D = 147.000f; // 레
-            E = 165.000f; // 미
-            G = 196.000f; // 솔
-        }
-
-        else { //여성음역대 or 선택하지 않음 (옥타브4)
-            C = 262.000f;
-            D = 294.000f;
-            E = 330.000f;
-            G = 392.000f;
-        }
+        last.setOnClickListener(new View.OnClickListener() { //이전마디
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (
+                        getApplicationContext(), PartPracticeBear3.class);
+                //intent.putExtra("sex", sex);
+                startActivity(intent);
+            }
+        });
 
         //도: 262.000f 레: 294.000f 미: 330.000f 솔: 392.000f
         //솔솔미도 솔솔솔
@@ -112,7 +102,7 @@ public class PartPracticeBear4 extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchButton1.setSelected(true);
-                recordAudio2(G);
+                recordAudio2(392.000f);
             }
         });
 
@@ -121,7 +111,7 @@ public class PartPracticeBear4 extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton2.setSelected(true);
-                recordAudio2(G);
+                recordAudio2(392.000f);
             }
         });
         pitchbutton3.setOnClickListener(new View.OnClickListener() {
@@ -129,7 +119,7 @@ public class PartPracticeBear4 extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton3.setSelected(true);
-                recordAudio2(E);
+                recordAudio2(330.000f);
             }
         });
         pitchbutton4.setOnClickListener(new View.OnClickListener() {
@@ -137,7 +127,7 @@ public class PartPracticeBear4 extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton4.setSelected(true);
-                recordAudio2(C);
+                recordAudio2(262.000f);
             }
         });
 
@@ -146,7 +136,7 @@ public class PartPracticeBear4 extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton5.setSelected(true);
-                recordAudio2(G);
+                recordAudio2(392.000f);
             }
         });
         pitchbutton6.setOnClickListener(new View.OnClickListener() {
@@ -154,7 +144,7 @@ public class PartPracticeBear4 extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton6.setSelected(true);
-                recordAudio2(G);
+                recordAudio2(392.000f);
             }
         });
         pitchbutton7.setOnClickListener(new View.OnClickListener() {
@@ -162,7 +152,7 @@ public class PartPracticeBear4 extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton7.setSelected(true);
-                recordAudio2(G);
+                recordAudio2(392.000f);
             }
         });
 
@@ -187,22 +177,20 @@ public class PartPracticeBear4 extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            //pitchTextView.setText(pitchInHz + "");
+                            pitchTextView.setText(pitchInHz + "");
                             if(Float.compare(pitchInHz, note - 5.000f) < 0){
                                 pitchline.setColorFilter(null);
                                 lowPitch.setTextColor(Color.parseColor("#e65d5d"));
                                 highPitch.setTextColor(Color.parseColor("#0a0a0a"));
-                                pitchTextView.setText("");
                             }else if(Float.compare(pitchInHz, note + 5.000f) > 0){
                                 pitchline.setColorFilter(null);
                                 lowPitch.setTextColor(Color.parseColor("#0a0a0a"));
                                 highPitch.setTextColor(Color.parseColor("#e65d5d"));
-                                pitchTextView.setText("");
                             }else{
                                 pitchline.setColorFilter(Color.parseColor("#82fa46"), PorterDuff.Mode.SRC_IN);
                                 lowPitch.setTextColor(Color.parseColor("#0a0a0a"));
                                 highPitch.setTextColor(Color.parseColor("#0a0a0a"));
-                                pitchTextView.setText("정확해요!");
+
                             }
                         }
                     });
