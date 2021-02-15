@@ -17,6 +17,7 @@ public class ChoiceLevel extends AppCompatActivity {
 
         Button start_low = (Button)findViewById(R.id.levellow);
         Button start_middle = (Button)findViewById(R.id.levelmiddle);
+        Button start_high = (Button)findViewById(R.id.levelhigh);
 
         start_low.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +34,15 @@ public class ChoiceLevel extends AppCompatActivity {
                 Intent intent2 = new Intent (
                         getApplicationContext(), MiddleChoiceSong.class);
                 startActivity(intent2);
+            }
+        });
+
+        start_high.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent (
+                        getApplicationContext(), HighChoiceSong.class);
+                startActivity(intent1);
             }
         });
     }

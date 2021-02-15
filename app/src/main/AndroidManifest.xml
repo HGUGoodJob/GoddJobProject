@@ -36,6 +36,13 @@
         <activity android:name=".PartPracticeBear4" />
         <activity android:name=".PartPracticeBear5" />
         <activity android:name=".PartPracticeBear6" />
+        <activity android:name=".PartPracticeODS1" />
+        <activity android:name=".PartPracticeODS2" />
+        <activity android:name=".PartPracticeODS3" />
+        <activity android:name=".PartPracticeODS4" />
+        <activity android:name=".PartPracticeODS5" />
+        <activity android:name=".PartPracticeODS6" />
+        <activity android:name=".PartPracticeODS7" />
     </application>
 
 </manifest>
