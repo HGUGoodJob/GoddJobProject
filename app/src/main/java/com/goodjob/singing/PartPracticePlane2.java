@@ -39,6 +39,7 @@ public class PartPracticePlane2 extends AppCompatActivity {
         TextView pitchTextView;
         Button pitchButton1, pitchbutton2, pitchbutton3, pitchbutton4, pitchbutton5, pitchbutton6, pitchbutton7, pitchbutton8; //recordButton -> pitchButton
         Button playVib;
+        Button backtochoice;
         ImageButton next, last;
         TextView highPitch;
         TextView lowPitch;
@@ -86,6 +87,16 @@ public class PartPracticePlane2 extends AppCompatActivity {
             next = findViewById(R.id.next);
             last= findViewById(R.id.last);
             playVib = findViewById(R.id.playVib);
+            backtochoice = findViewById(R.id.backtochoice);
+
+            backtochoice.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent (
+                            getApplicationContext(), LowChoiceSong.class);
+                    startActivity(intent);
+                }
+            });
 
             playVib.setOnClickListener(new View.OnClickListener() {
                 @Override

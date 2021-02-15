@@ -39,6 +39,7 @@
         android:scaleType="centerInside"
         android:src="@drawable/planefirstscore"
         app:layout_constraintEnd_toStartOf="@+id/pitchbutton3"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="@+id/pitchbutton3"
         app:layout_constraintTop_toTopOf="parent" />
 
