@@ -37,7 +37,7 @@ public class PartPracticePlane3 extends AppCompatActivity {
     File file;
 
     TextView pitchTextView;
-    Button pitchButton, pitchbutton2, pitchbutton3, pitchbutton4, pitchbutton5, pitchbutton6, pitchbutton7 ; //recordButton -> pitchButton
+    Button pitchButton1, pitchbutton2, pitchbutton3, pitchbutton4, pitchbutton5, pitchbutton6, pitchbutton7 ; //recordButton -> pitchButton
     Button playVib;
     ImageButton next, last;
     TextView highPitch;
@@ -72,7 +72,7 @@ public class PartPracticePlane3 extends AppCompatActivity {
                 ByteOrder.BIG_ENDIAN.equals(ByteOrder.nativeOrder()));
 
         pitchTextView = findViewById(R.id.pitchTextView);
-        pitchButton = findViewById(R.id.pitchButton);
+        pitchButton1 = findViewById(R.id.pitchButton1);
         pitchbutton2 = findViewById(R.id.pitchbutton2);
         pitchbutton3 = findViewById(R.id.pitchbutton3);
         pitchbutton4 = findViewById(R.id.pitchbutton4);
@@ -129,13 +129,13 @@ public class PartPracticePlane3 extends AppCompatActivity {
             E = 330.000f;
         }
 
-        pitchButton.setOnClickListener(new View.OnClickListener() {
+        pitchButton1.setOnClickListener(new View.OnClickListener() {
             //녹음 버튼을 누르면 녹음 실행
 
             @Override
             public void onClick(View v) {
                 buttonColored();
-                pitchButton.setSelected(true);
+                pitchButton1.setSelected(true);
                 recordAudio2(E); //미
             }
         });
@@ -242,7 +242,7 @@ public class PartPracticePlane3 extends AppCompatActivity {
 
 
     public void buttonColored(){
-        pitchButton.setSelected(false);
+        pitchButton1.setSelected(false);
         pitchbutton2.setSelected(false);
         pitchbutton3.setSelected(false);
         pitchbutton4.setSelected(false);
