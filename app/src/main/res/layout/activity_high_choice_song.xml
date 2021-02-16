@@ -6,25 +6,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back"
-    tools:context=".LowChoiceSong">
+    tools:context=".MiddleChoiceSong">
 
-    <ImageView
-        android:layout_width="501dp"
-        android:layout_height="57dp"
-        android:background="@drawable/buttonblack"
-        app:layout_constraintBottom_toTopOf="@+id/song_button3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.604"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/song_ods"
-        app:layout_constraintVertical_bias="1.0" />
+    <Button
+        android:id="@+id/backtochoice"
+        android:layout_width="70dp"
+        android:layout_height="51dp"
+        android:background="?selectableItemBackground"
+        android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
+        android:theme="@style/AppTheme.BlueRipple"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="@+id/odsfirstscore"
+        app:layout_constraintTop_toTopOf="@+id/odsfirstscore" />
 
     <Button
         android:id="@+id/song_ods"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
         android:background="?selectableItemBackground"
         android:drawableLeft="@drawable/ic_free_icon_diamond_636600"
         android:fontFamily="@font/scdream2"
@@ -38,16 +37,47 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:layout_width="501dp"
+        android:layout_height="57dp"
+        android:background="@drawable/buttonblack"
+        app:layout_constraintBottom_toTopOf="@+id/song_middle3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.588"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/song_ods"
+        app:layout_constraintVertical_bias="0.918" />
+
     <Button
-        android:id="@+id/song_button2"
+        android:id="@+id/song_middle3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="?selectableItemBackground"
+        android:drawableLeft="@drawable/ic_free_icon_diamond_636600"
+        android:fontFamily="@font/scdream2"
+        android:paddingLeft="40dp"
+        android:text="@string/strBtn6"
+        android:textSize="20dp"
+        android:theme="@style/AppTheme.BlueRipple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/song_middle2" />
+
+    <Button
+        android:id="@+id/song_middle2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:background="?selectableItemBackground"
         android:drawableLeft="@drawable/ic_free_icon_diamond_636600"
         android:fontFamily="@font/scdream2"
         android:paddingLeft="40dp"
         android:scaleType="centerInside"
-        android:text="@string/strBtn8"
+        android:text="@string/strBtn5"
         android:textSize="20dp"
         android:theme="@style/AppTheme.BlueRipple"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,56 +85,43 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/song_ods" />
 
-    <Button
-        android:id="@+id/song_button3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="?selectableItemBackground"
-        android:drawableLeft="@drawable/ic_free_icon_diamond_636600"
-        android:fontFamily="@font/scdream2"
-        android:paddingLeft="40dp"
-        android:text="@string/strBtn9"
-        android:textSize="20dp"
-        android:theme="@style/AppTheme.BlueRipple"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/song_button2" />
-
-    <CheckBox
-        android:id="@+id/woman"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="62dp"
-        android:layout_marginBottom="32dp"
-        android:text="여자"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <CheckBox
-        android:id="@+id/man"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="31dp"
-        android:layout_marginBottom="32dp"
-        android:text="남자"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/woman" />
-
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginEnd="41dp"
-        android:layout_marginBottom="40dp"
+        android:layout_width="134dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="41dp"
         android:text="음역대 선택"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/man"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/radioGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/song_button2" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2">
+
+        <RadioButton
+            android:id="@+id/man"
+            android:layout_width="73dp"
+            android:layout_height="match_parent"
+            android:text="남자" />
+
+        <RadioButton
+            android:id="@+id/woman"
+            android:layout_width="71dp"
+            android:layout_height="match_parent"
+            android:text="여자" />
+    </RadioGroup>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

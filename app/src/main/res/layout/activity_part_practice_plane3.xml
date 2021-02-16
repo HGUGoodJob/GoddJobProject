@@ -219,11 +219,11 @@
         android:tint="#9C27B0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.924"
         app:layout_constraintStart_toEndOf="@+id/last"
         app:layout_constraintStart_toStartOf="@+id/pitchbutton8"
         app:layout_constraintTop_toBottomOf="@+id/planethirdscore"
-        app:layout_constraintVertical_bias="0.768"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@android:drawable/ic_media_next" />
 
     <ImageButton
@@ -244,7 +244,7 @@
         app:layout_constraintHorizontal_bias="0.003"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/planethirdscore"
-        app:layout_constraintVertical_bias="0.77" />
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

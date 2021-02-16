@@ -6,7 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 public class LowChoiceSong extends AppCompatActivity {
     String sex = "";
@@ -15,21 +16,29 @@ public class LowChoiceSong extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_low_choice_song);
-        Button start_plane = (Button)findViewById(R.id.song_ods);
-        CheckBox man = (CheckBox) findViewById(R.id.man);
-        CheckBox woman = (CheckBox) findViewById(R.id.woman);
+        Button start_plane = (Button)findViewById(R.id.song_plane);
+        RadioButton man = (RadioButton) findViewById(R.id.man);
+        RadioButton woman = (RadioButton) findViewById(R.id.woman);
+        RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
+        Button back = (Button)findViewById(R.id.backtochoice);
 
-        man.setOnClickListener(new View.OnClickListener() {
+        back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sex="man";
+                Intent intent = new Intent (
+                        getApplicationContext(), ChoiceLevel.class);
+                startActivity(intent);
             }
         });
 
-        woman.setOnClickListener(new View.OnClickListener() {
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
-            public void onClick(View v) {
-                sex="woman";
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId == R.id.man){
+                    sex="man";
+                }else {
+                    sex="woman";
+                }
             }
         });
 
