@@ -52,11 +52,10 @@ public class PartPracticeODS1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_part_practice_ods1);
 
-        Intent intent = getIntent();
-        String sex = intent.getStringExtra("sex");
-
         Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
+        Intent intent = getIntent();
+        String sex = intent.getStringExtra("sex");
 
         File sdCard = Environment.getExternalStorageDirectory();
         file = new File(sdCard, filename);
@@ -97,8 +96,7 @@ public class PartPracticeODS1 extends AppCompatActivity {
         playVib.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // long[] pattern = {750, 250, 500, 500, 500, 500, 1000};
-                long[] pattern = {100, 100, 650, 100, 150, 100, 400, 100, 400, 100, 400, 100, 400, 100, 400 };
+                long[] pattern = {100, 100, 150, 100, 150, 100, 150, 100, 150, 100, 400, 100, 400, 100, 400, 100, 400};
                 //짝수 인덱스 : 대기시간 . 홀수 인덱스 : 진동시간
 
                 vibrator.vibrate(pattern, -1); // -1은 반복없음. 0은 무한반복
