@@ -5,8 +5,22 @@
     android:id="@+id/linearLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backsonglist"
+    android:background="@drawable/back"
     tools:context=".LowChoiceSong">
+
+
+    <ImageView
+        android:layout_width="501dp"
+        android:layout_height="57dp"
+        android:background="@drawable/buttonblack"
+        app:layout_constraintBottom_toTopOf="@+id/song_button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.604"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/song_ods"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/song_ods"
@@ -27,8 +41,8 @@
 
     <Button
         android:id="@+id/song_button2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="447dp"
+        android:layout_height="58dp"
         android:background="?selectableItemBackground"
         android:drawableLeft="@drawable/ic_free_icon_diamond_636600"
         android:fontFamily="@font/scdream2"
