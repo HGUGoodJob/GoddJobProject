@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -21,6 +20,16 @@ public class HighChoiceSong extends AppCompatActivity {
         RadioButton man = (RadioButton) findViewById(R.id.man);
         RadioButton woman = (RadioButton) findViewById(R.id.woman);
         RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
+        Button back = (Button)findViewById(R.id.backtochoice);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (
+                        getApplicationContext(), ChoiceLevel.class);
+                startActivity(intent);
+            }
+        });
 
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override

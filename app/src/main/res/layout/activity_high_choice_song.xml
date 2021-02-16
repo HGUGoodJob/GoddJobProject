@@ -8,25 +8,22 @@
     android:background="@drawable/back"
     tools:context=".MiddleChoiceSong">
 
-
-    <ImageView
-        android:layout_width="501dp"
-        android:layout_height="57dp"
-        android:background="@drawable/buttonblack"
-        app:layout_constraintBottom_toTopOf="@+id/song_middle3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.604"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/song_ods"
-        app:layout_constraintVertical_bias="1.0" />
-
+    <Button
+        android:id="@+id/backtochoice"
+        android:layout_width="70dp"
+        android:layout_height="51dp"
+        android:background="?selectableItemBackground"
+        android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
+        android:theme="@style/AppTheme.BlueRipple"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="@+id/odsfirstscore"
+        app:layout_constraintTop_toTopOf="@+id/odsfirstscore" />
 
     <Button
         android:id="@+id/song_ods"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
         android:background="?selectableItemBackground"
         android:drawableLeft="@drawable/ic_free_icon_diamond_636600"
         android:fontFamily="@font/scdream2"
@@ -40,10 +37,41 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:layout_width="501dp"
+        android:layout_height="57dp"
+        android:background="@drawable/buttonblack"
+        app:layout_constraintBottom_toTopOf="@+id/song_middle3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.588"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/song_ods"
+        app:layout_constraintVertical_bias="0.918" />
+
+    <Button
+        android:id="@+id/song_middle3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="?selectableItemBackground"
+        android:drawableLeft="@drawable/ic_free_icon_diamond_636600"
+        android:fontFamily="@font/scdream2"
+        android:paddingLeft="40dp"
+        android:text="@string/strBtn6"
+        android:textSize="20dp"
+        android:theme="@style/AppTheme.BlueRipple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/song_middle2" />
+
     <Button
         android:id="@+id/song_middle2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:background="?selectableItemBackground"
         android:drawableLeft="@drawable/ic_free_icon_diamond_636600"
         android:fontFamily="@font/scdream2"
@@ -53,23 +81,9 @@
         android:textSize="20dp"
         android:theme="@style/AppTheme.BlueRipple"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/song_ods" />
-
-    <Button
-        android:id="@+id/song_middle3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="?selectableItemBackground"
-        android:drawableLeft="@drawable/ic_free_icon_diamond_636600"
-        android:fontFamily="@font/scdream2"
-        android:paddingLeft="40dp"
-        android:text="@string/strBtn6"
-        android:textSize="20dp"
-        android:theme="@style/AppTheme.BlueRipple"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/song_middle2" />
 
     <TextView
         android:id="@+id/textView2"

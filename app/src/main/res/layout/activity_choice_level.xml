@@ -5,46 +5,26 @@
     android:id="@+id/linearLayout4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backlevel"
+    android:background="@drawable/back"
     tools:context=".MainActivity">
 
-
     <Button
-        android:id="@+id/levelhigh"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:id="@+id/backtochoice"
+        android:layout_width="56dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="17dp"
         android:background="?selectableItemBackground"
-        android:drawableLeft="@drawable/ic_free_icon_musical_note_126493"
-        android:fontFamily="@font/scdream2"
-        android:paddingLeft="140dp"
-        android:text="@string/high"
-        android:textSize="30dp"
+        android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
         android:theme="@style/AppTheme.BlueRipple"
-        app:layout_constraintBottom_toTopOf="@+id/levelmiddle"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/levelhigh"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/levelmiddle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="?selectableItemBackground"
-        android:drawableLeft="@drawable/ic_free_icon_musical_note_126493"
-        android:fontFamily="@font/scdream2"
-        android:paddingLeft="140dp"
-        android:text="@string/middle"
-        android:textSize="30dp"
-        android:theme="@style/AppTheme.BlueRipple"
-        app:layout_constraintBottom_toTopOf="@+id/levellow"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/levelhigh" />
 
     <Button
         android:id="@+id/levellow"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginBottom="3dp"
         android:background="?selectableItemBackground"
         android:drawableLeft="@drawable/ic_free_icon_musical_note_126493"
         android:fontFamily="@font/scdream2"
@@ -55,6 +35,41 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/levelmiddle" />
+        app:layout_constraintTop_toBottomOf="@+id/levelhigh" />
+
+    <Button
+        android:id="@+id/levelhigh"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="219dp"
+        android:background="?selectableItemBackground"
+        android:drawableLeft="@drawable/ic_free_icon_musical_note_126493"
+        android:fontFamily="@font/scdream2"
+        android:paddingLeft="140dp"
+        android:text="@string/high"
+        android:textSize="30dp"
+        android:theme="@style/AppTheme.BlueRipple"
+        app:layout_constraintBottom_toTopOf="@+id/levellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backtochoice" />
+
+    <Button
+        android:id="@+id/levelmiddle"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="218dp"
+        android:layout_marginBottom="217dp"
+        android:background="?selectableItemBackground"
+        android:drawableLeft="@drawable/ic_free_icon_musical_note_126493"
+        android:fontFamily="@font/scdream2"
+        android:paddingLeft="140dp"
+        android:text="@string/middle"
+        android:textSize="30dp"
+        android:theme="@style/AppTheme.BlueRipple"
+        app:layout_constraintBottom_toBottomOf="@+id/levellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/levelhigh" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
