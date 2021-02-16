@@ -45,7 +45,7 @@
 
     <Button
         android:id="@+id/pitchButton1"
-        android:layout_width="wrap_content"
+        android:layout_width="65dp"
         android:layout_height="wrap_content"
         android:background="?selectableItemBackground"
         android:fontFamily="@font/scdream2"
@@ -60,7 +60,7 @@
 
     <Button
         android:id="@+id/pitchbutton2"
-        android:layout_width="wrap_content"
+        android:layout_width="65dp"
         android:layout_height="wrap_content"
         android:background="?selectableItemBackground"
         android:fontFamily="@font/scdream2"
@@ -74,9 +74,8 @@
 
     <Button
         android:id="@+id/pitchbutton3"
-        android:layout_width="wrap_content"
+        android:layout_width="65dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
         android:background="?selectableItemBackground"
         android:fontFamily="@font/scdream2"
         android:text="하"
@@ -89,7 +88,7 @@
 
     <Button
         android:id="@+id/pitchbutton4"
-        android:layout_width="wrap_content"
+        android:layout_width="65dp"
         android:layout_height="wrap_content"
         android:background="?selectableItemBackground"
         android:fontFamily="@font/scdream2"
@@ -103,7 +102,7 @@
 
     <Button
         android:id="@+id/pitchbutton5"
-        android:layout_width="wrap_content"
+        android:layout_width="65dp"
         android:layout_height="wrap_content"
         android:background="?selectableItemBackground"
         android:fontFamily="@font/scdream2"
@@ -119,7 +118,6 @@
         android:id="@+id/pitchbutton6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
         android:background="?selectableItemBackground"
         android:fontFamily="@font/scdream2"
         android:text="왔"
@@ -135,7 +133,6 @@
         android:id="@+id/pitchbutton7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
         android:background="?selectableItemBackground"
         android:fontFamily="@font/scdream2"
         android:text="다"
@@ -226,6 +223,26 @@
         app:layout_constraintTop_toBottomOf="@+id/odsseventhscore"
         app:layout_constraintVertical_bias="0.768"
         app:srcCompat="@android:drawable/ic_media_next" />
+
+    <ImageButton
+        android:id="@+id/last"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="200dp"
+        android:background="?selectableItemBackground"
+        android:onClick="onClick_last"
+        android:scaleType="fitCenter"
+        android:src="@android:drawable/ic_media_previous"
+        android:tint="#9C27B0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/pitchbutton5"
+        app:layout_constraintEnd_toStartOf="@+id/next"
+        app:layout_constraintHorizontal_bias="0.003"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/odsseventhscore"
+        app:layout_constraintVertical_bias="0.77" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

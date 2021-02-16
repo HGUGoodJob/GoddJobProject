@@ -41,6 +41,7 @@ public class PartPracticeODS6 extends AppCompatActivity {
     Button playVib;
     Button backtochoice;
     ImageButton next;
+    ImageButton last;
     TextView highPitch;
     TextView lowPitch;
     ImageView pitchline;
@@ -81,6 +82,7 @@ public class PartPracticeODS6 extends AppCompatActivity {
         lowPitch = findViewById(R.id.lowpitch);
         pitchline = findViewById(R.id.pitchline);
         next = findViewById(R.id.next);
+        last = findViewById(R.id.last);
         playVib = findViewById(R.id.playVib);
         backtochoice = findViewById(R.id.backtochoice);
 
@@ -96,20 +98,29 @@ public class PartPracticeODS6 extends AppCompatActivity {
         playVib.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                long[] pattern = {100, 100, 400, 100, 150, 100, 150, 100, 400, 100, 650, 100, 150, 100, 400};
+                // long[] pattern = {750, 250, 500, 500, 500, 500, 1000};
+                long[] pattern = {100, 100, 650, 100, 150, 100, 400, 100, 400, 100, 400, 100, 400, 100, 400 };
                 //짝수 인덱스 : 대기시간 . 홀수 인덱스 : 진동시간
 
                 vibrator.vibrate(pattern, -1); // -1은 반복없음. 0은 무한반복
             }
         });
 
-
-
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent (
                         getApplicationContext(), PartPracticeODS7.class);
+                intent.putExtra("sex", sex);
+                startActivity(intent);
+            }
+        });
+
+        last.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (
+                        getApplicationContext(), PartPracticeODS5.class);
                 intent.putExtra("sex", sex);
                 startActivity(intent);
             }

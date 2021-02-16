@@ -41,11 +41,12 @@ public class PartPracticeODS2 extends AppCompatActivity {
     Button playVib;
     Button backtochoice;
     ImageButton next;
+    ImageButton last;
     TextView highPitch;
     TextView lowPitch;
     ImageView pitchline;
     String filename = "recorded_sound.wav";
-    float note, D, F, G, A, B, highC;
+    float D, F, G, A, B, highC;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,6 +82,7 @@ public class PartPracticeODS2 extends AppCompatActivity {
         lowPitch = findViewById(R.id.lowpitch);
         pitchline = findViewById(R.id.pitchline);
         next = findViewById(R.id.next);
+        last = findViewById(R.id.last);
         playVib = findViewById(R.id.playVib);
         backtochoice = findViewById(R.id.backtochoice);
 
@@ -103,12 +105,21 @@ public class PartPracticeODS2 extends AppCompatActivity {
             }
         });
 
-
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent (
                         getApplicationContext(), PartPracticeODS3.class);
+                intent.putExtra("sex", sex);
+                startActivity(intent);
+            }
+        });
+
+        last.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (
+                        getApplicationContext(), PartPracticeODS1.class);
                 intent.putExtra("sex", sex);
                 startActivity(intent);
             }
