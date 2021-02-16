@@ -38,7 +38,7 @@ public class PartPracticeBear5 extends AppCompatActivity {
     ImageButton next, last;
     //1,2,3,4 아기곰은 5,6 너무 9,10,11 귀여워
     Button pitchButton1, pitchbutton2, pitchbutton3, pitchbutton4, pitchbutton5, pitchbutton6, pitchbutton7, pitchbutton8, pitchbutton9;
-    //recordButton -> pitchButton
+    Button backtochoice;
     TextView highPitch;
     TextView lowPitch;
     ImageView pitchline;
@@ -81,6 +81,16 @@ public class PartPracticeBear5 extends AppCompatActivity {
         highPitch = findViewById(R.id.highpitch);
         lowPitch = findViewById(R.id.lowpitch);
         pitchline = findViewById(R.id.pitchline);
+        backtochoice = findViewById(R.id.backtochoice);
+
+        backtochoice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (
+                        getApplicationContext(), MiddleChoiceSong.class);
+                startActivity(intent);
+            }
+        });
 
         next.setOnClickListener(new View.OnClickListener() { //다음마디
             @Override
