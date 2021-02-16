@@ -9,7 +9,7 @@
     tools:context=".LowChoiceSong">
 
     <Button
-        android:id="@+id/song_ods"
+        android:id="@+id/song_plane"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="?selectableItemBackground"
@@ -40,7 +40,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/song_ods" />
+        app:layout_constraintTop_toBottomOf="@+id/song_plane" />
 
     <Button
         android:id="@+id/song_button3"

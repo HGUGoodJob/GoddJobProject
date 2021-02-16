@@ -41,6 +41,7 @@ public class PartPracticeODS5 extends AppCompatActivity {
     Button playVib;
     Button backtochoice;
     ImageButton next;
+    ImageButton last;
     TextView highPitch;
     TextView lowPitch;
     ImageView pitchline;
@@ -80,6 +81,7 @@ public class PartPracticeODS5 extends AppCompatActivity {
         lowPitch = findViewById(R.id.lowpitch);
         pitchline = findViewById(R.id.pitchline);
         next = findViewById(R.id.next);
+        last = findViewById(R.id.last);
         playVib = findViewById(R.id.playVib);
         backtochoice = findViewById(R.id.backtochoice);
 
@@ -102,12 +104,21 @@ public class PartPracticeODS5 extends AppCompatActivity {
             }
         });
 
-
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent (
                         getApplicationContext(), PartPracticeODS6.class);
+                intent.putExtra("sex", sex);
+                startActivity(intent);
+            }
+        });
+
+        last.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (
+                        getApplicationContext(), PartPracticeODS4.class);
                 intent.putExtra("sex", sex);
                 startActivity(intent);
             }

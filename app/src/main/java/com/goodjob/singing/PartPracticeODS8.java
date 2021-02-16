@@ -40,7 +40,7 @@ public class PartPracticeODS8 extends AppCompatActivity {
     Button pitchButton1, pitchbutton2, pitchbutton3, pitchbutton4, pitchbutton5, pitchbutton6, pitchbutton7 ; //recordButton -> pitchButton
     Button playVib;
     Button backtochoice;
-    ImageButton next;
+    ImageButton last;
     TextView highPitch;
     TextView lowPitch;
     ImageView pitchline;
@@ -80,7 +80,7 @@ public class PartPracticeODS8 extends AppCompatActivity {
         highPitch = findViewById(R.id.highpitch);
         lowPitch = findViewById(R.id.lowpitch);
         pitchline = findViewById(R.id.pitchline);
-        next = findViewById(R.id.next);
+        last = findViewById(R.id.last);
         playVib = findViewById(R.id.playVib);
         backtochoice = findViewById(R.id.backtochoice);
 
@@ -103,16 +103,15 @@ public class PartPracticeODS8 extends AppCompatActivity {
             }
         });
 
-
-//        next.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent (
-//                        getApplicationContext(), PartPracticeODS3.class);
-//                intent.putExtra("sex", sex);
-//                startActivity(intent);
-//            }
-//        }); -> 마지막 페이지는 last 버튼만 있음!
+        last.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (
+                        getApplicationContext(), PartPracticeODS7.class);
+                intent.putExtra("sex", sex);
+                startActivity(intent);
+            }
+        });
 
         //레파라도시라솔 -> 레(파#)솔라시도
 

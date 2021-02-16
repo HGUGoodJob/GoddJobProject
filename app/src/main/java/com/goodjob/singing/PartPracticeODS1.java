@@ -45,7 +45,7 @@ public class PartPracticeODS1 extends AppCompatActivity {
     TextView lowPitch;
     ImageView pitchline;
     String filename = "recorded_sound.wav";
-    float note, B, C, D, E, G;
+    float B, C, D, E, G;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
