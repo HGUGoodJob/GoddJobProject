@@ -10,15 +10,19 @@
 
     <Button
         android:id="@+id/playVib"
-        android:layout_width="70dp"
-        android:layout_height="51dp"
-        android:theme="@style/AppTheme.BlueRipple"
+        android:layout_width="72dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="584dp"
         android:background="?selectableItemBackground"
         android:drawableLeft="@drawable/ic_telephone"
-        app:layout_constraintRight_toRightOf="@+id/bearsecondscore"
-        app:layout_constraintHorizontal_chainStyle="packed"
+        android:theme="@style/AppTheme.BlueRipple"
+        app:layout_constraintBottom_toTopOf="@+id/pitchline"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintTop_toTopOf="@+id/bearsecondscore" />
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintRight_toRightOf="@+id/bearthirdscore"
+        app:layout_constraintStart_toEndOf="@+id/backtochoice"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/backtochoice"
@@ -28,8 +32,8 @@
         android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
         android:theme="@style/AppTheme.BlueRipple"
         app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintLeft_toLeftOf="@+id/bearsecondscore"
-        app:layout_constraintTop_toTopOf="@+id/bearsecondscore" />
+        app:layout_constraintLeft_toLeftOf="@+id/bearthirdscore"
+        app:layout_constraintTop_toTopOf="@+id/bearthirdscore" />
 
     <ImageView
         android:id="@+id/bearsecondscore"
@@ -37,14 +41,13 @@
         android:layout_height="wrap_content"
         android:scaleType="centerInside"
         android:src="@drawable/bearsecondscore"
-        app:layout_constraintEnd_toStartOf="@+id/pitchbutton3"
-        app:layout_constraintStart_toStartOf="@+id/pitchbutton3"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/backtochoice"
+        app:layout_constraintTop_toTopOf="@+id/backtochoice" />
 
     <ImageButton
         android:id="@+id/next"
-        android:layout_width="38dp"
-        android:layout_height="45dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginStart="23dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="200dp"
@@ -56,7 +59,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/pitchbutton8"
-        app:layout_constraintTop_toBottomOf="@+id/bearsecondscore"
+        app:layout_constraintTop_toBottomOf="@+id/bearthirdscore"
         app:layout_constraintVertical_bias="0.768"
         app:srcCompat="@android:drawable/ic_media_next" />
 
@@ -77,14 +80,28 @@
         app:layout_constraintEnd_toStartOf="@+id/next"
         app:layout_constraintHorizontal_bias="0.003"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bearsecondscore"
+        app:layout_constraintTop_toBottomOf="@+id/bearthirdscore"
         app:layout_constraintVertical_bias="0.77" />
+
+    <Button
+        android:id="@+id/pitchbutton11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:fontFamily="@font/scdream2"
+        android:text="곰"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:theme="@style/AppTheme.BlueRipple"
+        app:layout_constraintBaseline_toBaselineOf="@+id/pitchbutton10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pitchbutton10" />
 
     <Button
         android:id="@+id/pitchButton1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
+        android:layout_marginStart="9dp"
         android:background="?selectableItemBackground"
         android:fontFamily="@font/scdream2"
         android:text="아"
@@ -95,6 +112,20 @@
         app:layout_constraintEnd_toStartOf="@+id/pitchbutton2"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/pitchbutton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:fontFamily="@font/scdream2"
+        android:text="곰"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:theme="@style/AppTheme.BlueRipple"
+        app:layout_constraintBaseline_toBaselineOf="@+id/pitchbutton2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pitchbutton2" />
 
     <Button
         android:id="@+id/pitchbutton2"
@@ -111,39 +142,24 @@
         app:layout_constraintTop_toBottomOf="@+id/bearsecondscore" />
 
     <Button
-        android:id="@+id/pitchbutton3"
+        android:id="@+id/pitchbutton7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
         android:background="?selectableItemBackground"
         android:fontFamily="@font/scdream2"
         android:text="곰"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:theme="@style/AppTheme.BlueRipple"
-        app:layout_constraintBaseline_toBaselineOf="@+id/pitchbutton2"
-        app:layout_constraintEnd_toStartOf="@+id/pitchbutton4"
-        app:layout_constraintStart_toEndOf="@+id/pitchbutton2" />
-
-    <Button
-        android:id="@+id/pitchbutton4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="?selectableItemBackground"
-        android:fontFamily="@font/scdream2"
-        android:text=" "
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:theme="@style/AppTheme.BlueRipple"
+        app:layout_constraintBaseline_toBaselineOf="@+id/pitchbutton6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/pitchbutton3"
-        app:layout_constraintTop_toBottomOf="@+id/bearsecondscore" />
+        app:layout_constraintStart_toEndOf="@+id/pitchbutton6" />
 
     <Button
         android:id="@+id/pitchbutton5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
+        android:layout_marginStart="9dp"
         android:background="?selectableItemBackground"
         android:fontFamily="@font/scdream2"
         android:text="엄"
@@ -156,52 +172,10 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/pitchbutton6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="?selectableItemBackground"
-        android:fontFamily="@font/scdream2"
-        android:text="마"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:theme="@style/AppTheme.BlueRipple"
-        app:layout_constraintEnd_toStartOf="@+id/pitchbutton7"
-        app:layout_constraintStart_toEndOf="@+id/pitchbutton5"
-        app:layout_constraintTop_toBottomOf="@+id/pitchButton1" />
-
-    <Button
-        android:id="@+id/pitchbutton7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:background="?selectableItemBackground"
-        android:fontFamily="@font/scdream2"
-        android:text="곰"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:theme="@style/AppTheme.BlueRipple"
-        app:layout_constraintBaseline_toBaselineOf="@+id/pitchbutton6"
-        app:layout_constraintEnd_toStartOf="@+id/pitchbutton8"
-        app:layout_constraintStart_toEndOf="@+id/pitchbutton6" />
-
-    <Button
-        android:id="@+id/pitchbutton8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="?selectableItemBackground"
-        android:fontFamily="@font/scdream2"
-        android:text=" "
-        android:textSize="20dp"
-        android:theme="@style/AppTheme.BlueRipple"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/pitchbutton7"
-        app:layout_constraintTop_toBottomOf="@+id/pitchbutton4" />
-
-    <Button
         android:id="@+id/pitchbutton9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
+        android:layout_marginStart="9dp"
         android:background="?selectableItemBackground"
         android:fontFamily="@font/scdream2"
         android:text="아"
@@ -210,7 +184,6 @@
         android:theme="@style/AppTheme.BlueRipple"
         app:layout_constraintBaseline_toBaselineOf="@+id/pitchbutton10"
         app:layout_constraintEnd_toStartOf="@+id/pitchbutton10"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -224,52 +197,36 @@
         android:textColor="@color/white"
         android:textSize="20dp"
         android:theme="@style/AppTheme.BlueRipple"
-        app:layout_constraintEnd_toStartOf="@+id/pitchbutton7"
-        app:layout_constraintStart_toEndOf="@+id/pitchbutton5"
-        app:layout_constraintTop_toBottomOf="@+id/pitchbutton5" />
+        app:layout_constraintEnd_toStartOf="@+id/pitchbutton11"
+        app:layout_constraintStart_toEndOf="@+id/pitchbutton9"
+        app:layout_constraintTop_toBottomOf="@+id/pitchbutton7" />
 
     <Button
-        android:id="@+id/pitchbutton11"
+        android:id="@+id/pitchbutton6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
         android:background="?selectableItemBackground"
         android:fontFamily="@font/scdream2"
-        android:text="곰"
+        android:text="마"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:theme="@style/AppTheme.BlueRipple"
-        app:layout_constraintBaseline_toBaselineOf="@+id/pitchbutton10"
-        app:layout_constraintEnd_toStartOf="@+id/pitchbutton12"
-        app:layout_constraintStart_toEndOf="@+id/pitchbutton10" />
-
-    <Button
-        android:id="@+id/pitchbutton12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="?selectableItemBackground"
-        android:fontFamily="@font/scdream2"
-        android:text=" "
-        android:textSize="20dp"
-        android:theme="@style/AppTheme.BlueRipple"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/pitchbutton11"
-        app:layout_constraintTop_toBottomOf="@+id/pitchbutton8" />
-
-
-
+        app:layout_constraintEnd_toStartOf="@+id/pitchbutton7"
+        app:layout_constraintStart_toEndOf="@+id/pitchbutton5"
+        app:layout_constraintTop_toBottomOf="@+id/pitchbutton3" />
 
 
     <TextView
         android:id="@+id/pitchTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:text="1.0"
+        android:layout_marginStart="206dp"
+        android:layout_marginEnd="127dp"
+        android:layout_marginBottom="23dp"
         android:textColor="#000000"
         android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/highpitch"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/next"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -278,7 +235,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:fontFamily="@font/scdream2"
-        android:text="Too high!"
+        android:text="높아요!"
         android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/pitchline"
         app:layout_constraintEnd_toEndOf="parent"
@@ -300,7 +257,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="36dp"
         android:fontFamily="@font/scdream2"
-        android:text="Too low!"
+        android:text="낮아요!"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
