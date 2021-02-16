@@ -9,6 +9,18 @@
     android:orientation="vertical">
 
     <Button
+        android:id="@+id/playVib"
+        android:layout_width="70dp"
+        android:layout_height="51dp"
+        android:theme="@style/AppTheme.BlueRipple"
+        android:background="?selectableItemBackground"
+        android:drawableLeft="@drawable/ic_telephone"
+        app:layout_constraintRight_toRightOf="@+id/bearthirdscore"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintTop_toTopOf="@+id/bearthirdscore" />
+
+    <Button
         android:id="@+id/backtochoice"
         android:layout_width="70dp"
         android:layout_height="51dp"
