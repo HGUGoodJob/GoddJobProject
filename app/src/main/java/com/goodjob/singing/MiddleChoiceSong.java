@@ -4,7 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,24 +16,21 @@ public class MiddleChoiceSong extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_middle_choice_song);
-        Button start_bear = (Button)findViewById(R.id.song_bear);
-        CheckBox man = (CheckBox) findViewById(R.id.man);
-        CheckBox woman = (CheckBox) findViewById(R.id.woman);
+        Button start_bear = (Button)findViewById(R.id.song_ods);
+        RadioButton man = (RadioButton) findViewById(R.id.man);
+        RadioButton woman = (RadioButton) findViewById(R.id.woman);
+        RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
 
-        man.setOnClickListener(new View.OnClickListener() {
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
-            public void onClick(View v) {
-                sex="man";
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId == R.id.man){
+                    sex="man";
+                }else {
+                    sex="woman";
+                }
             }
         });
-
-        woman.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                sex="woman";
-            }
-        });
-
 
         start_bear.setOnClickListener(new View.OnClickListener() {
             @Override
