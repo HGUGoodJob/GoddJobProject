@@ -15,10 +15,10 @@
         android:theme="@style/AppTheme.BlueRipple"
         android:background="?selectableItemBackground"
         android:drawableLeft="@drawable/ic_telephone"
-        app:layout_constraintRight_toRightOf="@+id/odsfirstscore"
+        app:layout_constraintRight_toRightOf="@+id/odseighthscore"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintTop_toTopOf="@+id/odsfirstscore" />
+        app:layout_constraintTop_toTopOf="@+id/odseighthscore" />
 
     <Button
         android:id="@+id/backtochoice"
@@ -28,16 +28,16 @@
         android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
         android:theme="@style/AppTheme.BlueRipple"
         app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintLeft_toLeftOf="@+id/odsfirstscore"
-        app:layout_constraintTop_toTopOf="@+id/odsfirstscore" />
+        app:layout_constraintLeft_toLeftOf="@+id/odseighthscore"
+        app:layout_constraintTop_toTopOf="@+id/odseighthscore" />
 
 
     <ImageView
-        android:id="@+id/odsfirstscore"
+        android:id="@+id/odseighthscore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleType="centerInside"
-        android:src="@drawable/odsfirstscore"
+        android:src="@drawable/odseighthscore"
         app:layout_constraintEnd_toStartOf="@+id/pitchbutton3"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="@+id/pitchbutton3"
@@ -47,9 +47,10 @@
         android:id="@+id/pitchButton1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
         android:background="?selectableItemBackground"
         android:fontFamily="@font/scdream2"
-        android:text="깊"
+        android:text="물"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:theme="@style/AppTheme.BlueRipple"
@@ -64,13 +65,13 @@
         android:layout_height="wrap_content"
         android:background="?selectableItemBackground"
         android:fontFamily="@font/scdream2"
-        android:text="은"
+        android:text="만"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:theme="@style/AppTheme.BlueRipple"
         app:layout_constraintEnd_toStartOf="@+id/pitchbutton3"
         app:layout_constraintStart_toEndOf="@+id/pitchButton1"
-        app:layout_constraintTop_toBottomOf="@+id/odsfirstscore" />
+        app:layout_constraintTop_toBottomOf="@+id/odseighthscore" />
 
     <Button
         android:id="@+id/pitchbutton3"
@@ -79,7 +80,7 @@
         android:layout_marginEnd="4dp"
         android:background="?selectableItemBackground"
         android:fontFamily="@font/scdream2"
-        android:text="산"
+        android:text="먹"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:theme="@style/AppTheme.BlueRipple"
@@ -93,43 +94,43 @@
         android:layout_height="wrap_content"
         android:background="?selectableItemBackground"
         android:fontFamily="@font/scdream2"
-        android:text="-"
+        android:text="고"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:theme="@style/AppTheme.BlueRipple"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/pitchbutton3"
-        app:layout_constraintTop_toBottomOf="@+id/odsfirstscore" />
+        app:layout_constraintTop_toBottomOf="@+id/odseighthscore" />
 
     <Button
         android:id="@+id/pitchbutton5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
         android:background="?selectableItemBackground"
         android:fontFamily="@font/scdream2"
-        android:text="속"
+        android:text="가"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:theme="@style/AppTheme.BlueRipple"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/pitchbutton4"
-        app:layout_constraintTop_toBottomOf="@+id/odsfirstscore" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/pitchbutton6"
+        app:layout_constraintEnd_toStartOf="@+id/pitchbutton6"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/pitchbutton6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
         android:background="?selectableItemBackground"
         android:fontFamily="@font/scdream2"
-        android:text="옹"
+        android:text="지"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:theme="@style/AppTheme.BlueRipple"
-        app:layout_constraintBaseline_toBaselineOf="@+id/pitchbutton8"
         app:layout_constraintEnd_toStartOf="@+id/pitchbutton7"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/pitchbutton5"
+        app:layout_constraintTop_toBottomOf="@+id/pitchButton1" />
 
     <Button
         android:id="@+id/pitchbutton7"
@@ -138,11 +139,11 @@
         android:layout_marginEnd="4dp"
         android:background="?selectableItemBackground"
         android:fontFamily="@font/scdream2"
-        android:text="달"
+        android:text="요"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:theme="@style/AppTheme.BlueRipple"
-        app:layout_constraintBaseline_toBaselineOf="@+id/pitchbutton8"
+        app:layout_constraintBaseline_toBaselineOf="@+id/pitchbutton6"
         app:layout_constraintEnd_toStartOf="@+id/pitchbutton8"
         app:layout_constraintStart_toEndOf="@+id/pitchbutton6" />
 
@@ -153,12 +154,15 @@
         android:layout_height="wrap_content"
         android:background="?selectableItemBackground"
         android:fontFamily="@font/scdream2"
-        android:text="샘"
+        android:text=""
         android:textSize="20dp"
         android:theme="@style/AppTheme.BlueRipple"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/pitchbutton7"
-        app:layout_constraintTop_toBottomOf="@+id/pitchbutton3" />
+        app:layout_constraintTop_toBottomOf="@+id/pitchbutton4" />
+
+
+
 
     <TextView
         android:id="@+id/pitchTextView"
@@ -222,7 +226,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/pitchbutton8"
-        app:layout_constraintTop_toBottomOf="@+id/odsfirstscore"
+        app:layout_constraintTop_toBottomOf="@+id/odseighthscore"
         app:layout_constraintVertical_bias="0.768"
         app:srcCompat="@android:drawable/ic_media_next" />
 

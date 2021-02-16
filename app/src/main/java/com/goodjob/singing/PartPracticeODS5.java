@@ -37,7 +37,7 @@ public class PartPracticeODS5 extends AppCompatActivity {
     File file;
 
     TextView pitchTextView;
-    Button pitchButton1, pitchbutton2, pitchbutton3, pitchbutton4, pitchbutton5, pitchbutton6, pitchbutton7 ; //recordButton -> pitchButton
+    Button pitchButton1, pitchbutton2, pitchbutton3, pitchbutton4, pitchbutton5, pitchbutton6;
     Button playVib;
     Button backtochoice;
     ImageButton next;
@@ -45,10 +45,7 @@ public class PartPracticeODS5 extends AppCompatActivity {
     TextView lowPitch;
     ImageView pitchline;
     String filename = "recorded_sound.wav";
-    float note;
-    float C;
-    float D;
-    float E;
+    float note, G, A, B, highC, highD;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,7 +76,6 @@ public class PartPracticeODS5 extends AppCompatActivity {
         pitchbutton4 = findViewById(R.id.pitchbutton4);
         pitchbutton5 = findViewById(R.id.pitchbutton5);
         pitchbutton6 = findViewById(R.id.pitchbutton6);
-        pitchbutton7 = findViewById(R.id.pitchbutton7);
         highPitch = findViewById(R.id.highpitch);
         lowPitch = findViewById(R.id.lowpitch);
         pitchline = findViewById(R.id.pitchline);
@@ -91,7 +87,7 @@ public class PartPracticeODS5 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent (
-                        getApplicationContext(), LowChoiceSong.class);
+                        getApplicationContext(), HighChoiceSong.class);
                 startActivity(intent);
             }
         });
@@ -112,32 +108,36 @@ public class PartPracticeODS5 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent (
-                        getApplicationContext(), PartPracticePlane2.class);
+                        getApplicationContext(), PartPracticeODS6.class);
                 intent.putExtra("sex", sex);
                 startActivity(intent);
             }
         });
 
+        //솔시(높은레)(높은도)시라 -> 솔라시(높은도)(높은레)
+
         if (sex.equals("man")) { //남성음역대 (옥타브3)
-            C = 131.000f; // 도
-            D = 147.000f; // 레
-            E = 165.000f; // 미
+            G = 196.000f;
+            A = 220.000f;
+            B = 247.000f;
+            highC = 262.000f;
+            highD = 294.000f;
         }
 
         else { //여성음역대 or 선택하지 않음 (옥타브4)
-            C = 262.000f;
-            D = 294.000f;
-            E = 330.000f;
+            G = 392.000f;
+            A = 440.000f;
+            B = 494.000f;
+            highC = 523.000f;
+            highD = 587.000f;
         }
 
         pitchButton1.setOnClickListener(new View.OnClickListener() {
-            //녹음 버튼을 누르면 녹음 실행
-
             @Override
             public void onClick(View v) {
                 buttonColored();
                 pitchButton1.setSelected(true);
-                recordAudio2(E); //미
+                recordAudio2(G); //솔
             }
         });
 
@@ -146,7 +146,7 @@ public class PartPracticeODS5 extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton2.setSelected(true);
-                recordAudio2(D); //레
+                recordAudio2(B); //시
             }
         });
         pitchbutton3.setOnClickListener(new View.OnClickListener() {
@@ -154,7 +154,7 @@ public class PartPracticeODS5 extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton3.setSelected(true);
-                recordAudio2(C); //도
+                recordAudio2(highD); //레
             }
         });
         pitchbutton4.setOnClickListener(new View.OnClickListener() {
@@ -162,7 +162,7 @@ public class PartPracticeODS5 extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton4.setSelected(true);
-                recordAudio2(D); //레
+                recordAudio2(highC); //도
             }
         });
         pitchbutton5.setOnClickListener(new View.OnClickListener() {
@@ -170,7 +170,7 @@ public class PartPracticeODS5 extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton5.setSelected(true);
-                recordAudio2(E); //미
+                recordAudio2(B); //시
             }
         });
         pitchbutton6.setOnClickListener(new View.OnClickListener() {
@@ -178,18 +178,9 @@ public class PartPracticeODS5 extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton6.setSelected(true);
-                recordAudio2(E); //미
+                recordAudio2(A); //라
             }
         });
-        pitchbutton7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                buttonColored();
-                pitchbutton7.setSelected(true);
-                recordAudio2(E); //미
-            }
-        });
-
     }
 
     public void recordAudio2(float note)
@@ -249,7 +240,6 @@ public class PartPracticeODS5 extends AppCompatActivity {
         pitchbutton4.setSelected(false);
         pitchbutton5.setSelected(false);
         pitchbutton6.setSelected(false);
-        pitchbutton7.setSelected(false);
     }
     public void releaseDispatcher()
     {

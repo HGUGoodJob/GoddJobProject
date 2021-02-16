@@ -52,12 +52,21 @@
         android:paddingLeft="40dp"
         android:text="@string/strBtn3"
         android:textSize="20dp"
-
         android:theme="@style/AppTheme.BlueRipple"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/song_button2" />
+
+<!--    <Button-->
+<!--        android:id="@+id/backtolevel"-->
+<!--        android:layout_width="70dp"-->
+<!--        android:layout_height="51dp"-->
+<!--        android:background="?selectableItemBackground"-->
+<!--        android:drawableLeft="@drawable/ic_baseline_arrow_back_24"-->
+<!--        android:theme="@style/AppTheme.BlueRipple"-->
+<!--        app:layout_constraintHorizontal_chainStyle="packed"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/textView2" />-->
 
     <CheckBox
         android:id="@+id/woman"

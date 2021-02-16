@@ -40,9 +40,9 @@ public class ChoiceLevel extends AppCompatActivity {
         start_high.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent1 = new Intent (
+                Intent intent3 = new Intent (
                         getApplicationContext(), HighChoiceSong.class);
-                startActivity(intent1);
+                startActivity(intent3);
             }
         });
     }

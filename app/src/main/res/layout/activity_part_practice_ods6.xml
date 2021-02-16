@@ -15,10 +15,10 @@
         android:theme="@style/AppTheme.BlueRipple"
         android:background="?selectableItemBackground"
         android:drawableLeft="@drawable/ic_telephone"
-        app:layout_constraintRight_toRightOf="@+id/planefirstscore"
+        app:layout_constraintRight_toRightOf="@+id/odssixthscore"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintTop_toTopOf="@+id/planefirstscore" />
+        app:layout_constraintTop_toTopOf="@+id/odssixthscore" />
 
     <Button
         android:id="@+id/backtochoice"
@@ -28,16 +28,16 @@
         android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
         android:theme="@style/AppTheme.BlueRipple"
         app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintLeft_toLeftOf="@+id/planefirstscore"
-        app:layout_constraintTop_toTopOf="@+id/planefirstscore" />
+        app:layout_constraintLeft_toLeftOf="@+id/odssixthscore"
+        app:layout_constraintTop_toTopOf="@+id/odssixthscore" />
 
 
     <ImageView
-        android:id="@+id/planefirstscore"
+        android:id="@+id/odssixthscore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleType="centerInside"
-        android:src="@drawable/planefirstscore"
+        android:src="@drawable/odssixthscore"
         app:layout_constraintEnd_toStartOf="@+id/pitchbutton3"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="@+id/pitchbutton3"
@@ -50,7 +50,7 @@
         android:layout_marginStart="7dp"
         android:background="?selectableItemBackground"
         android:fontFamily="@font/scdream2"
-        android:text="떴"
+        android:text="눈"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:theme="@style/AppTheme.BlueRipple"
@@ -65,13 +65,13 @@
         android:layout_height="wrap_content"
         android:background="?selectableItemBackground"
         android:fontFamily="@font/scdream2"
-        android:text="다"
+        android:text="비"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:theme="@style/AppTheme.BlueRipple"
         app:layout_constraintEnd_toStartOf="@+id/pitchbutton3"
         app:layout_constraintStart_toEndOf="@+id/pitchButton1"
-        app:layout_constraintTop_toBottomOf="@+id/planefirstscore" />
+        app:layout_constraintTop_toBottomOf="@+id/odssixthscore" />
 
     <Button
         android:id="@+id/pitchbutton3"
@@ -80,7 +80,7 @@
         android:layout_marginEnd="4dp"
         android:background="?selectableItemBackground"
         android:fontFamily="@font/scdream2"
-        android:text="떴"
+        android:text="비"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:theme="@style/AppTheme.BlueRipple"
@@ -94,13 +94,13 @@
         android:layout_height="wrap_content"
         android:background="?selectableItemBackground"
         android:fontFamily="@font/scdream2"
-        android:text="다"
+        android:text="고"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:theme="@style/AppTheme.BlueRipple"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/pitchbutton3"
-        app:layout_constraintTop_toBottomOf="@+id/planefirstscore" />
+        app:layout_constraintTop_toBottomOf="@+id/odssixthscore" />
 
     <Button
         android:id="@+id/pitchbutton5"
@@ -109,7 +109,7 @@
         android:layout_marginStart="7dp"
         android:background="?selectableItemBackground"
         android:fontFamily="@font/scdream2"
-        android:text="비"
+        android:text="일"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:theme="@style/AppTheme.BlueRipple"
@@ -124,7 +124,7 @@
         android:layout_height="wrap_content"
         android:background="?selectableItemBackground"
         android:fontFamily="@font/scdream2"
-        android:text="행"
+        android:text="어"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:theme="@style/AppTheme.BlueRipple"
@@ -139,7 +139,7 @@
         android:layout_marginEnd="4dp"
         android:background="?selectableItemBackground"
         android:fontFamily="@font/scdream2"
-        android:text="기"
+        android:text="나"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:theme="@style/AppTheme.BlueRipple"
@@ -226,7 +226,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/pitchbutton8"
-        app:layout_constraintTop_toBottomOf="@+id/planefirstscore"
+        app:layout_constraintTop_toBottomOf="@+id/odssixthscore"
         app:layout_constraintVertical_bias="0.768"
         app:srcCompat="@android:drawable/ic_media_next" />
 

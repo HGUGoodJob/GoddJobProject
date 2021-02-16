@@ -30,7 +30,7 @@ import be.tarsos.dsp.pitch.PitchDetectionResult;
 import be.tarsos.dsp.pitch.PitchProcessor;
 import be.tarsos.dsp.writer.WriterProcessor;
 
-public class PartPracticeODS6 extends AppCompatActivity {
+public class PartPracticeODS8 extends AppCompatActivity {
     AudioDispatcher dispatcher;
     TarsosDSPAudioFormat tarsosDSPAudioFormat;  //TarsosDSP Format 세팅
 
@@ -50,7 +50,7 @@ public class PartPracticeODS6 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_part_practice_ods6);
+        setContentView(R.layout.activity_part_practice_ods8);
 
         Intent intent = getIntent();
         String sex = intent.getStringExtra("sex");
@@ -105,34 +105,34 @@ public class PartPracticeODS6 extends AppCompatActivity {
         });
 
 
-        next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent (
-                        getApplicationContext(), PartPracticeODS7.class);
-                intent.putExtra("sex", sex);
-                startActivity(intent);
-            }
-        });
+//        next.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent (
+//                        getApplicationContext(), PartPracticeODS3.class);
+//                intent.putExtra("sex", sex);
+//                startActivity(intent);
+//            }
+//        }); -> 마지막 페이지는 last 버튼만 있음!
 
-        //레(파#)라(높은도)시라솔 -> 레(파#)솔라시(높은도)
+        //레파라도시라솔 -> 레(파#)솔라시도
 
         if (sex.equals("man")) { //남성음역대 (옥타브3)
-            D = 147.000f; //레
+            D = 147.000f; // 레
             F = 185.000f; //파#
-            G = 196.000f; //솔
-            A = 220.000f; //라
+            G = 196.00f; //솔
+            A = 220.00f; //라
             B = 247.000f; //시
-            highC = 262.000f; //높은 도
+            highC = 262.000f; //도
         }
 
         else { //여성음역대 or 선택하지 않음 (옥타브4)
-            D = 294.000f;
-            F = 370.000f;
-            G = 392.000f;
-            A = 440.000f;
-            B = 494.000f;
-            highC = 523.000f;
+            D = 294.000f; // 레
+            F = 370.000f; //파#
+            G = 392.00f; //솔
+            A = 440.00f; //라
+            B = 494.000f; //시
+            highC = 523.000f; //도
         }
 
         pitchButton1.setOnClickListener(new View.OnClickListener() {
@@ -165,7 +165,7 @@ public class PartPracticeODS6 extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton4.setSelected(true);
-                recordAudio2(highC); //도
+                recordAudio2(highC); //(높은)도
             }
         });
         pitchbutton5.setOnClickListener(new View.OnClickListener() {

@@ -97,6 +97,9 @@
     <string name="strBtn4">곰 세마리</string>
     <string name="strBtn5">노래2 (난이도 중)</string>
     <string name="strBtn6">노래3 (난이도 중)</string>
+    <string name="strBtn7">옹달샘</string>
+    <string name="strBtn8">노래2 (난이도 상)</string>
+    <string name="strBtn9">노래3 (난이도 상)</string>
     <string name="high">상</string>
     <string name="middle">중</string>
     <string name="low">하</string>
