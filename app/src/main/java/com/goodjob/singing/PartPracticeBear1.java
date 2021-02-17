@@ -162,7 +162,7 @@ public class PartPracticeBear1 extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton4.setSelected(true);
-                recordAudio2(D);
+                recordAudio2(C);
             }
         });
 
@@ -171,7 +171,7 @@ public class PartPracticeBear1 extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton5.setSelected(true);
-                recordAudio2(D);
+                recordAudio2(C);
             }
         });
         pitchbutton6.setOnClickListener(new View.OnClickListener() {
