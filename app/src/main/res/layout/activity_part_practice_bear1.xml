@@ -171,6 +171,7 @@
         android:background="?selectableItemBackground"
         android:fontFamily="@font/scdream2"
         android:text="에"
+        android:textColor="@color/white"
         android:textSize="20dp"
         android:theme="@style/AppTheme.BlueRipple"
         app:layout_constraintEnd_toEndOf="parent"

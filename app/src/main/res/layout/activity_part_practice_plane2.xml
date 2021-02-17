@@ -142,6 +142,7 @@
         android:background="?selectableItemBackground"
         android:fontFamily="@font/scdream2"
         android:text="라"
+        android:textColor="@color/white"
         android:textSize="20dp"
         android:theme="@style/AppTheme.BlueRipple"
         app:layout_constraintStart_toEndOf="@+id/pitchbutton3"

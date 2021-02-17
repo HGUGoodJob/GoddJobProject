@@ -38,8 +38,7 @@ public class PartPracticeBear2 extends AppCompatActivity {
 
     TextView pitchTextView;
     ImageButton next, last;
-    //1,2,3 아빠곰 5,6,7 엄마곰 9,10,11 아기곰
-    Button pitchButton1, pitchbutton2, pitchbutton3, pitchbutton4, pitchbutton5, pitchbutton6, pitchbutton7, pitchbutton8, pitchbutton9, pitchbutton10, pitchbutton11;
+    Button pitchButton1, pitchbutton2, pitchbutton3, pitchbutton4, pitchbutton5, pitchbutton6, pitchbutton7, pitchbutton8, pitchbutton9;
     Button playVib;
     Button backtochoice;
     TextView highPitch;
@@ -170,7 +169,7 @@ public class PartPracticeBear2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 buttonColored();
-                pitchbutton5.setSelected(true);
+                pitchbutton4.setSelected(true);
                 recordAudio2(G);
             }
         });
@@ -179,7 +178,7 @@ public class PartPracticeBear2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 buttonColored();
-                pitchbutton6.setSelected(true);
+                pitchbutton5.setSelected(true);
                 recordAudio2(G);
             }
         });
@@ -187,7 +186,7 @@ public class PartPracticeBear2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 buttonColored();
-                pitchbutton7.setSelected(true);
+                pitchbutton6.setSelected(true);
                 recordAudio2(E);
             }
         });
@@ -195,7 +194,7 @@ public class PartPracticeBear2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 buttonColored();
-                pitchbutton9.setSelected(true);
+                pitchbutton7.setSelected(true);
                 recordAudio2(C);
             }
         });
@@ -203,7 +202,7 @@ public class PartPracticeBear2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 buttonColored();
-                pitchbutton10.setSelected(true);
+                pitchbutton8.setSelected(true);
                 recordAudio2(C);
             }
         });
@@ -211,7 +210,7 @@ public class PartPracticeBear2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 buttonColored();
-                pitchbutton11.setSelected(true);
+                pitchbutton9.setSelected(true);
                 recordAudio2(C);
             }
         });
