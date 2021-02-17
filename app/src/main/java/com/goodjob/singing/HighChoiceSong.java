@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -45,10 +46,14 @@ public class HighChoiceSong extends AppCompatActivity {
         start_ods.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent (
-                        getApplicationContext(), PartPracticeODS1.class);
-                intent.putExtra("sex", sex);
-                startActivity(intent);
+                if (sex != "man" && sex != "woman") {
+                    Toast.makeText(getApplicationContext(), "음역대를 선택해 주세요.", Toast.LENGTH_LONG).show();
+                } else {
+                    Intent intent = new Intent(
+                            getApplicationContext(), PartPracticeODS1.class);
+                    intent.putExtra("sex", sex);
+                    startActivity(intent);
+                }
             }
         });
     }
