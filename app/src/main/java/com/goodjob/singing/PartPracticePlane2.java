@@ -172,7 +172,7 @@ public class PartPracticePlane2 extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     buttonColored();
-                    pitchbutton5.setSelected(true);
+                    pitchbutton6.setSelected(true);
                     recordAudio2(E); //미
                 }
             });
@@ -180,7 +180,7 @@ public class PartPracticePlane2 extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     buttonColored();
-                    pitchbutton6.setSelected(true);
+                    pitchbutton7.setSelected(true);
                     recordAudio2(G); //솔
                 }
             });
@@ -188,7 +188,7 @@ public class PartPracticePlane2 extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     buttonColored();
-                    pitchbutton7.setSelected(true);
+                    pitchbutton8.setSelected(true);
                     recordAudio2(G);
                 }
             });

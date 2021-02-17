@@ -192,7 +192,7 @@ public class PartPracticeODS1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 buttonColored();
-                pitchbutton7.setSelected(true);
+                pitchbutton8.setSelected(true);
                 recordAudio2(E); //미
             }
         });

@@ -118,6 +118,7 @@ public class PartPracticeBear6 extends AppCompatActivity {
             C = 131.000f; // 도
             E = 165.000f; // 미
             G = 196.000f; // 솔
+            D = 146.000f;
             high_C = 262.000f; //높은
         }
 
@@ -125,6 +126,7 @@ public class PartPracticeBear6 extends AppCompatActivity {
             C = 262.000f;
             E = 330.000f;
             G = 392.000f;
+            D = 293.000f;
             high_C = 523.000f;
         }
         //도솔도솔 미레도
