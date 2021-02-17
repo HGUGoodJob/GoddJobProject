@@ -37,7 +37,7 @@ public class PartPracticeODS5 extends AppCompatActivity {
     File file;
 
     TextView pitchTextView;
-    Button pitchButton1, pitchbutton2, pitchbutton3, pitchbutton4, pitchbutton5, pitchbutton6;
+    Button pitchButton1, pitchbutton2, pitchbutton3, pitchbutton5, pitchbutton6, pitchbutton7;
     Button playVib;
     Button backtochoice;
     ImageButton next;
@@ -74,9 +74,9 @@ public class PartPracticeODS5 extends AppCompatActivity {
         pitchButton1 = findViewById(R.id.pitchButton1);
         pitchbutton2 = findViewById(R.id.pitchbutton2);
         pitchbutton3 = findViewById(R.id.pitchbutton3);
-        pitchbutton4 = findViewById(R.id.pitchbutton4);
         pitchbutton5 = findViewById(R.id.pitchbutton5);
         pitchbutton6 = findViewById(R.id.pitchbutton6);
+        pitchbutton7 = findViewById(R.id.pitchbutton7);
         highPitch = findViewById(R.id.highpitch);
         lowPitch = findViewById(R.id.lowpitch);
         pitchline = findViewById(R.id.pitchline);
@@ -167,20 +167,12 @@ public class PartPracticeODS5 extends AppCompatActivity {
                 recordAudio2(highD); //레
             }
         });
-        pitchbutton4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                buttonColored();
-                pitchbutton4.setSelected(true);
-                recordAudio2(highC); //도
-            }
-        });
         pitchbutton5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton5.setSelected(true);
-                recordAudio2(B); //시
+                recordAudio2(highC); //도
             }
         });
         pitchbutton6.setOnClickListener(new View.OnClickListener() {
@@ -188,6 +180,14 @@ public class PartPracticeODS5 extends AppCompatActivity {
             public void onClick(View v) {
                 buttonColored();
                 pitchbutton6.setSelected(true);
+                recordAudio2(B); //시
+            }
+        });
+        pitchbutton7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                buttonColored();
+                pitchbutton7.setSelected(true);
                 recordAudio2(A); //라
             }
         });
@@ -247,9 +247,10 @@ public class PartPracticeODS5 extends AppCompatActivity {
         pitchButton1.setSelected(false);
         pitchbutton2.setSelected(false);
         pitchbutton3.setSelected(false);
-        pitchbutton4.setSelected(false);
+
         pitchbutton5.setSelected(false);
         pitchbutton6.setSelected(false);
+        pitchbutton7.setSelected(false);
     }
     public void releaseDispatcher()
     {
