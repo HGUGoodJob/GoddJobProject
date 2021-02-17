@@ -10,26 +10,31 @@
 
     <Button
         android:id="@+id/playVib"
-        android:layout_width="70dp"
-        android:layout_height="51dp"
-        android:theme="@style/AppTheme.BlueRipple"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="1dp"
         android:background="?selectableItemBackground"
         android:drawableLeft="@drawable/ic_telephone"
-        app:layout_constraintRight_toRightOf="@+id/odsfifthscore"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintTop_toTopOf="@+id/odsfifthscore" />
+        android:theme="@style/AppTheme.BlueRipple"
+        app:layout_constraintBottom_toBottomOf="@+id/backtochoice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/backtochoice"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/backtochoice"
-        android:layout_width="70dp"
-        android:layout_height="51dp"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="290dp"
         android:background="?selectableItemBackground"
         android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
         android:theme="@style/AppTheme.BlueRipple"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintLeft_toLeftOf="@+id/odsfifthscore"
-        app:layout_constraintTop_toTopOf="@+id/odsfifthscore" />
+        app:layout_constraintEnd_toStartOf="@+id/playVib"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/odsfirstscore" />
 
 
     <ImageView
