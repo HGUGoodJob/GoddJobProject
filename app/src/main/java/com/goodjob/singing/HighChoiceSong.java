@@ -48,7 +48,6 @@ public class HighChoiceSong extends AppCompatActivity {
             public void onClick(View v) {
                 if (sex != "man" && sex != "woman") {
                     Toast.makeText(getApplicationContext(), "음역대를 선택해 주세요.", Toast.LENGTH_LONG).show();
-                    finish();
                 } else {
                     Intent intent = new Intent(
                             getApplicationContext(), PartPracticeODS1.class);
