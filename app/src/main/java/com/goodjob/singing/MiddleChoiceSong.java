@@ -22,6 +22,7 @@ public class MiddleChoiceSong extends AppCompatActivity {
         RadioButton woman = (RadioButton) findViewById(R.id.woman);
         RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
         Button back = (Button)findViewById(R.id.backtochoice);
+        Button home = (Button)findViewById(R.id.home);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,6 +30,15 @@ public class MiddleChoiceSong extends AppCompatActivity {
                 Intent intent = new Intent (
                         getApplicationContext(), ChoiceLevel.class);
                 startActivity(intent);
+            }
+        });
+
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2 = new Intent (
+                        getApplicationContext(), MainActivity.class);
+                startActivity(intent2);
             }
         });
 

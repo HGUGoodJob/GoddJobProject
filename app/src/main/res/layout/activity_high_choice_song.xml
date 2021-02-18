@@ -10,14 +10,28 @@
 
     <Button
         android:id="@+id/backtochoice"
-        android:layout_width="70dp"
-        android:layout_height="51dp"
+        android:layout_width="43dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
         android:background="?selectableItemBackground"
         android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
         android:theme="@style/AppTheme.BlueRipple"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintLeft_toLeftOf="@+id/odsfirstscore"
         app:layout_constraintTop_toTopOf="@+id/odsfirstscore" />
+
+    <Button
+        android:id="@+id/home"
+        android:layout_width="43dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="2dp"
+        android:background="?selectableItemBackground"
+        android:drawableLeft="@drawable/ic_baseline_home_24"
+        android:theme="@style/AppTheme.BlueRipple"
+        app:layout_constraintStart_toEndOf="@+id/backtochoice"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/song_ods"

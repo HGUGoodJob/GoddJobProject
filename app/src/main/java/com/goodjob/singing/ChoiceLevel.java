@@ -19,6 +19,7 @@ public class ChoiceLevel extends AppCompatActivity {
         Button start_middle = (Button)findViewById(R.id.levelmiddle);
         Button start_high = (Button)findViewById(R.id.levelhigh);
         Button back = (Button)findViewById(R.id.backtochoice);
+        Button home = (Button)findViewById(R.id.home);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,6 +27,15 @@ public class ChoiceLevel extends AppCompatActivity {
                 Intent intent = new Intent (
                         getApplicationContext(), MainActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2 = new Intent (
+                        getApplicationContext(), MainActivity.class);
+                startActivity(intent2);
             }
         });
 
