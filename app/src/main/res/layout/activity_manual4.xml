@@ -10,61 +10,64 @@
 
     <Button
         android:id="@+id/backtochoice"
-        android:layout_width="70dp"
-        android:layout_height="51dp"
+        android:layout_width="45dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="290dp"
         android:background="?selectableItemBackground"
         android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
         android:theme="@style/AppTheme.BlueRipple"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintLeft_toLeftOf="@+id/odsfirstscore"
+        app:layout_constraintEnd_toStartOf="@+id/playVib"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/odsfirstscore" />
 
 
     <ImageView
-        android:layout_width="224dp"
-        android:layout_height="375dp"
+        android:layout_width="213dp"
+        android:layout_height="325dp"
         android:background="@drawable/manual3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.682" />
+        app:layout_constraintVertical_bias="0.81" />
 
     <TextView
-        android:layout_width="359dp"
-        android:layout_height="600dp"
-        android:layout_marginTop="68dp"
+        android:layout_width="354dp"
+        android:layout_height="145dp"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="68dp"
         android:layout_marginRight="10dp"
         android:fontFamily="@font/scdream2"
         android:text="원하는 곡을 선택하시면 다음과 같은 화면이 뜹니다.\n자신이 원하는 가사를 하나씩 선택하여 소리를 내며 결과를 확인합니다."
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/backward"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="624dp"
+        android:layout_marginTop="536dp"
         android:background="@drawable/ic_baseline_arrow_back_24"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintHorizontal_bias="0.094"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/forward"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="624dp"
+        android:layout_width="44dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="536dp"
         android:background="@drawable/ic_baseline_arrow_forward_24"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintHorizontal_bias="0.934"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
