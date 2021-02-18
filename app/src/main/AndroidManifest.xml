@@ -44,6 +44,11 @@
         <activity android:name=".PartPracticeODS6" />
         <activity android:name=".PartPracticeODS7" />
         <activity android:name=".PartPracticeODS8" />
+        <activity android:name=".Manual" />
+        <activity android:name=".Manual2" />
+        <activity android:name=".Manual4" />
+        <activity android:name=".Manual5" />
+        <activity android:name=".Manual6" />
     </application>
 
 </manifest>

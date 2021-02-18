@@ -30,12 +30,22 @@ public class MainActivity extends AppCompatActivity {
         checkPermission();
 
         Button click_start = (Button) findViewById(R.id.button1);
+        Button click_to_manual = (Button) findViewById(R.id.button2);
 
         click_start.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(
                         getApplicationContext(), ChoiceLevel.class);
+                startActivity(intent);
+            }
+        });
+
+        click_to_manual.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(
+                        getApplicationContext(), Manual.class);
                 startActivity(intent);
             }
         });
